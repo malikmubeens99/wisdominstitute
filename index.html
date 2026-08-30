@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Primary Meta Tags -->
   <title>Wisdom Institute | Online Quran Classes with 1-on-1 Teachers</title>
   <meta name="title" content="Wisdom Institute | Online Quran Classes with 1-on-1 Teachers">
-  <meta name="description" content="Personalized 1-on-1 online Quran classes for kids and adults. Learn Noorani Qaida, Tajweed, Nazra, and Hifz with qualified teachers. Free 3-day trial.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Learn Quran online with qualified 1-on-1 teachers. Personalized classes for kids and adults covering Noorani Qaida, Tajweed, and Hifz. Start your free trial.">
   <link rel="canonical" href="https://wisdominstitute.com/">
 
-  <!-- Font: Inter (Clean & Minimal) -->
+  <!-- Fonts: Plus Jakarta Sans for clean modern look + Amiri for subtle Arabic touches -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Schema Markup (JSON-LD) -->
+  <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,9 +25,8 @@
         "@id": "https://wisdominstitute.com/#organization",
         "name": "Wisdom Institute",
         "url": "https://wisdominstitute.com",
-        "description": "Live 1-on-1 online Quran, Tajweed, and Islamic Studies education for children and adults.",
-        "telephone": "+92-300-0000000",
-        "email": "info@wisdominstitute.com"
+        "description": "Live 1-on-1 online Quran, Tajweed, and Islamic Studies academy for children and adults.",
+        "telephone": "+92-300-0000000"
       },
       {
         "@type": "WebSite",
@@ -41,18 +39,18 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How do online Quran classes work?",
+            "name": "How do online 1-on-1 Quran classes work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Classes are conducted 1-on-1 via Zoom or Google Meet with live screen sharing and real-time pronunciation guidance."
+              "text": "Classes are conducted live over screen-sharing software (Zoom or Google Meet). The teacher and student review digital lessons with instant audio-visual feedback."
             }
           },
           {
             "@type": "Question",
-            "name": "Are female teachers available?",
+            "name": "Are female Quran tutors available?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, qualified female Quran tutors are available for female students and young children."
+              "text": "Yes, certified female Quran instructors are available for sisters and children."
             }
           }
         ]
@@ -63,194 +61,363 @@
 
   <style>
     :root {
-      --primary: #0b5548;
-      --primary-dark: #073b33;
-      --primary-light: #eaf4f0;
-      --text-main: #1f2937;
-      --text-muted: #6b7280;
-      --border: #e5e7eb;
-      --bg-light: #f9fafb;
-      --white: #ffffff;
-      --radius: 8px;
+      --primary: #07473b;
+      --primary-hover: #05332a;
+      --primary-subtle: #edf7f4;
+      --gold: #c69a4b;
+      --gold-subtle: #fbf7ee;
+      
+      --text-dark: #0f172a;
+      --text-body: #475569;
+      --text-muted: #94a3b8;
+      
+      --bg-white: #ffffff;
+      --bg-soft: #f8faf9;
+      --border: #e2e8f0;
+      
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 12px 32px rgba(15, 23, 42, 0.06);
+      --shadow-lg: 0 20px 48px rgba(7, 71, 59, 0.08);
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--text-main);
-      background-color: var(--white);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-white);
       line-height: 1.6;
-      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .container { width: min(1120px, 92%); margin: auto; }
+    .container { width: min(1180px, 92%); margin: auto; }
     
     /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 10px 20px;
+      gap: 10px;
+      padding: 13px 24px;
       font-size: 14px;
-      font-weight: 600;
-      border-radius: var(--radius);
-      border: 1px solid transparent;
+      font-weight: 700;
+      border-radius: 50px;
       text-decoration: none;
       cursor: pointer;
-      transition: background 0.15s ease, border-color 0.15s ease;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
     }
-    .btn-primary { background: var(--primary); color: var(--white); }
-    .btn-primary:hover { background: var(--primary-dark); }
-    .btn-secondary { background: var(--white); border-color: var(--border); color: var(--text-main); }
-    .btn-secondary:hover { background: var(--bg-light); }
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(7, 71, 59, 0.2);
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(7, 71, 59, 0.28);
+    }
+    .btn-outline {
+      background: #ffffff;
+      border-color: var(--border);
+      color: var(--text-dark);
+    }
+    .btn-outline:hover {
+      background: var(--bg-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
 
-    /* Top Bar */
+    /* Top Banner */
     .topbar {
-      background: var(--primary-dark);
-      color: #d1fae5;
+      background: #04261f;
+      color: #cbd5e1;
       font-size: 12px;
       padding: 8px 0;
     }
-    .topbar .container { display: flex; justify-content: space-between; }
-    .topbar a { color: #fff; text-decoration: none; }
+    .topbar .container { display: flex; justify-content: space-between; align-items: center; }
+    .topbar a { color: #f8fafc; text-decoration: none; font-weight: 600; }
 
-    /* Header & Nav */
+    /* Sticky Nav */
     header {
-      border-bottom: 1px solid var(--border);
-      background: var(--white);
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
-    .nav-inner { height: 70px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--primary-dark); font-weight: 700; font-size: 17px; }
-    .logo-badge { width: 32px; height: 32px; background: var(--primary); color: #fff; display: grid; place-items: center; border-radius: 6px; font-weight: 700; font-size: 15px; }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 14px; font-weight: 500; }
+    .nav-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-dark); font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .logo-badge {
+      width: 38px; height: 38px;
+      background: var(--primary);
+      color: #ffffff;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-family: 'Amiri', serif;
+      font-size: 20px;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-body); font-size: 14px; font-weight: 600; transition: color 0.15s; }
     .nav-links a:hover { color: var(--primary); }
 
     /* Hero Section */
-    .hero { padding: 70px 0 60px; background: var(--bg-light); border-bottom: 1px solid var(--border); }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
-    .hero-tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--primary); background: var(--primary-light); padding: 4px 10px; border-radius: 4px; margin-bottom: 16px; }
-    h1 { font-size: 38px; line-height: 1.2; color: #111827; margin-bottom: 16px; font-weight: 700; }
-    h1 span { color: var(--primary); }
-    .hero p { font-size: 16px; color: var(--text-muted); margin-bottom: 24px; max-width: 500px; }
-    .hero-actions { display: flex; gap: 12px; margin-bottom: 28px; }
-    .hero-points { display: flex; gap: 20px; font-size: 13px; color: var(--text-muted); }
-
-    .hero-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px;
+    .hero {
+      padding: 70px 0 80px;
+      background: radial-gradient(circle at 10% 20%, rgba(237, 247, 244, 0.7) 0%, rgba(255, 255, 255, 1) 90%);
+      position: relative;
     }
-    .hero-card h3 { font-size: 17px; margin-bottom: 12px; }
-    .hero-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px; }
-    .hero-card li::before { content: "✓ "; color: var(--primary); font-weight: bold; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center; }
+    
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #10b981; }
 
-    /* Sections */
-    .section { padding: 70px 0; }
-    .section-header { text-align: center; margin-bottom: 40px; }
-    .section-title { font-size: 28px; color: #111827; margin-bottom: 8px; font-weight: 700; }
-    .section-sub { font-size: 14px; color: var(--text-muted); max-width: 600px; margin: auto; }
+    h1 {
+      font-size: clamp(36px, 4.5vw, 54px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    h1 span { color: var(--primary); }
+    .hero-lead { font-size: 17px; color: var(--text-body); margin-bottom: 32px; max-width: 520px; line-height: 1.65; }
+    
+    .hero-actions { display: flex; gap: 14px; margin-bottom: 35px; flex-wrap: wrap; }
+    
+    .hero-trust { display: flex; align-items: center; gap: 16px; font-size: 13px; color: var(--text-body); }
+    .hero-trust i { color: #10b981; }
 
-    /* Courses Grid */
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .card {
-      background: var(--white);
+    /* Hero Visual Card */
+    .hero-visual-wrapper { position: relative; }
+    .hero-image-card {
+      width: 100%;
+      height: 480px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(7, 71, 59, 0.05) 0%, rgba(7, 71, 59, 0.4) 100%),
+                  url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid #ffffff;
+      position: relative;
+    }
+    .floating-pill {
+      position: absolute;
+      background: #ffffff;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
+    }
+    .fp-top { top: 25px; right: -20px; }
+    .fp-bottom { bottom: 25px; left: -20px; }
+    .fp-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+    }
+
+    /* Section Structure */
+    .section { padding: 90px 0; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-tag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+    .section-title { font-size: 34px; letter-spacing: -0.02em; font-weight: 800; color: var(--text-dark); margin-bottom: 12px; }
+    .section-desc { font-size: 15px; color: var(--text-body); max-width: 600px; margin: auto; }
+
+    /* Courses Modern Cards */
+    .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .course-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: all 0.25s ease;
     }
-    .card h3 { font-size: 17px; margin-bottom: 8px; color: #111827; }
-    .card p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 16px; }
-    .card-link { font-size: 13px; font-weight: 600; color: var(--primary); text-decoration: none; }
-    .card-link:hover { text-decoration: underline; }
-
-    /* Features Grid */
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .feature-card {
-      background: var(--bg-light);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
+    .course-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
     }
-    .feature-card h4 { font-size: 15px; margin-bottom: 6px; color: #111827; }
-    .feature-card p { font-size: 13px; color: var(--text-muted); }
-
-    /* Trial Section & Form */
-    .trial-box {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--white);
+    .course-icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--primary-subtle);
+      color: var(--primary);
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      overflow: hidden;
+      place-items: center;
+      font-size: 20px;
+      margin-bottom: 22px;
     }
-    .trial-info { background: var(--bg-light); padding: 40px; border-right: 1px solid var(--border); }
-    .trial-info h3 { font-size: 22px; margin-bottom: 10px; color: #111827; }
-    .trial-info p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px; }
-    .trial-info ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-main); }
-    .trial-info li::before { content: "✓ "; color: var(--primary); font-weight: 700; }
+    .course-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); }
+    .course-card p { font-size: 14px; color: var(--text-body); margin-bottom: 20px; line-height: 1.6; }
+    .course-card-link {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .course-card-link:hover { gap: 10px; }
 
-    .trial-form { padding: 40px; }
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+    /* Why Section with Visual Split */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .why-image-card {
+      height: 480px;
+      border-radius: var(--radius-lg);
+      background: url('https://images.unsplash.com/photo-1591604129939-f1efa4d0c8d7?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .perk-items { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+    .perk-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: var(--text-dark); }
+    .perk-item p { font-size: 13px; color: var(--text-body); }
+
+    /* Interactive Clean Trial Box */
+    .trial-wrapper {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      overflow: hidden;
+      max-width: 960px;
+      margin: auto;
+    }
+    .trial-side {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 45px 35px;
+    }
+    .trial-side h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; line-height: 1.2; }
+    .trial-side p { font-size: 14px; opacity: 0.85; margin-bottom: 25px; }
+    .trial-points { list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 13.5px; }
+    .trial-points li { display: flex; gap: 10px; align-items: center; }
+    .trial-points i { color: #5eead4; }
+
+    .trial-form-wrap { padding: 45px 40px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--text-dark); }
     .form-control {
       width: 100%;
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
       font-size: 14px;
       font-family: inherit;
       outline: none;
+      transition: border-color 0.2s;
     }
-    .form-control:focus { border-color: var(--primary); }
+    .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(7, 71, 59, 0.08); }
 
-    /* FAQ Accordion */
-    .faq-wrapper { max-width: 760px; margin: auto; }
-    .faq-row { border-bottom: 1px solid var(--border); padding: 18px 0; }
-    .faq-q { font-size: 15px; font-weight: 600; color: #111827; cursor: pointer; display: flex; justify-content: space-between; }
-    .faq-a { font-size: 13.5px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+    /* FAQ */
+    .faq-container { max-width: 780px; margin: auto; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      padding: 18px 22px;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-answer { padding: 0 22px 18px; font-size: 14px; color: var(--text-body); display: none; line-height: 1.6; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-question i { transform: rotate(180deg); color: var(--primary); }
 
-    /* Footer */
-    footer { border-top: 1px solid var(--border); background: var(--bg-light); padding: 50px 0 24px; font-size: 13px; }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 30px; }
-    .footer-col h4 { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: #111827; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col a { text-decoration: none; color: var(--text-muted); }
+    /* Minimal Modern Footer */
+    footer {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      padding: 60px 0 30px;
+      font-size: 13px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { text-decoration: none; color: var(--text-body); transition: color 0.15s; }
     .footer-col a:hover { color: var(--primary); }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; color: var(--text-muted); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+    }
 
     /* Responsive */
-    @media (max-width: 860px) {
-      .hero-grid, .trial-box, .grid-3, .grid-4, .footer-grid { grid-template-columns: 1fr; }
-      .trial-info { border-right: none; border-bottom: 1px solid var(--border); padding: 30px; }
-      .trial-form { padding: 30px; }
+    @media (max-width: 960px) {
+      .hero-grid, .why-grid, .trial-wrapper { grid-template-columns: 1fr; }
+      .course-grid, .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-visual-wrapper { order: -1; }
+      .hero-image-card { height: 360px; }
       .nav-links { display: none; }
+      .fp-top { right: 10px; }
+      .fp-bottom { left: 10px; }
+    }
+    @media (max-width: 600px) {
+      .course-grid, .footer-grid, .perk-items { grid-template-columns: 1fr; }
+      .trial-side, .trial-form-wrap { padding: 30px 20px; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Top Bar -->
-  <div class="topbar">
+  <!-- Topbar -->
+  <aside class="topbar">
     <div class="container">
-      <span>Personalized 1-on-1 Online Quran Classes</span>
-      <span>WhatsApp: <a href="https://wa.me/923000000000">+92 300 0000000</a></span>
+      <span><i class="fa-solid fa-globe"></i> Online 1-on-1 Quran Classes Worldwide</span>
+      <span><a href="https://wa.me/923000000000" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Support: +92 300 0000000</a></span>
     </div>
-  </div>
+  </aside>
 
-  <!-- Header -->
+  <!-- Sticky Nav -->
   <header>
     <div class="container nav-inner">
-      <a href="#" class="logo">
+      <a href="/" class="logo">
         <div class="logo-badge">و</div>
         <span>Wisdom Institute</span>
       </a>
@@ -265,34 +432,45 @@
   </header>
 
   <main>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="hero-tag">Live 1-on-1 Classes</span>
-          <h1>Online Quran Classes with <span>Qualified Teachers</span></h1>
-          <p>Learn Noorani Qaida, Tajweed, Quran recitation, and memorization at your own schedule. Patient instruction tailored for children and adult beginners.</p>
+          <div class="badge-pill">
+            <span class="badge-dot"></span> Personalized Live Quran Tutoring
+          </div>
+          <h1>Learn Quran Online with <span>Qualified 1-on-1</span> Teachers</h1>
+          <p class="hero-lead">Build confident recitation, correct Tajweed pronunciation, and structured Quran memorization from home. Personalized schedules tailored for kids and adults.</p>
           
           <div class="hero-actions">
-            <a href="#trial" class="btn btn-primary">Start 3-Day Free Trial</a>
-            <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+            <a href="#trial" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book 3-Day Free Trial</a>
+            <a href="#courses" class="btn btn-outline">Explore Programs</a>
           </div>
 
-          <div class="hero-points">
-            <span>✓ No credit card required</span>
-            <span>✓ Male & female teachers</span>
-            <span>✓ Flexible timings</span>
+          <div class="hero-trust">
+            <span><i class="fa-solid fa-check"></i> 1-on-1 Attention</span>
+            <span><i class="fa-solid fa-check"></i> Male & Female Tutors</span>
+            <span><i class="fa-solid fa-check"></i> 24/7 Availability</span>
           </div>
         </div>
 
-        <div class="hero-card">
-          <h3>Book a Free Assessment Class</h3>
-          <ul>
-            <li>30-minute 1-on-1 interactive session</li>
-            <li>Reading level and Tajweed evaluation</li>
-            <li>Customized learning plan according to your goals</li>
-          </ul>
-          <a href="#trial" class="btn btn-primary" style="width: 100%;">Claim Free Assessment</a>
+        <div class="hero-visual-wrapper">
+          <div class="hero-image-card"></div>
+          <div class="floating-pill fp-top">
+            <div class="fp-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div>
+              <strong style="font-size:13px; display:block;">Live Tajweed Correction</strong>
+              <span style="font-size:11px; color:var(--text-body);">Instant feedback on Makharij</span>
+            </div>
+          </div>
+          <div class="floating-pill fp-bottom">
+            <div class="fp-icon"><i class="fa-solid fa-user-check"></i></div>
+            <div>
+              <strong style="font-size:13px; display:block;">Certified Instructors</strong>
+              <span style="font-size:11px; color:var(--text-body);">Vetted & experienced faculty</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -301,223 +479,269 @@
     <section id="courses" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Academic Courses</h2>
-          <p class="section-sub">Structured learning paths designed for beginners, advancing students, and aspiring Huffaz.</p>
+          <div class="section-tag">Learning Pathways</div>
+          <h2 class="section-title">Structured Online Quran Courses</h2>
+          <p class="section-desc">From basic Arabic alphabets to advanced recitation and Hifz, choose a curriculum built around your pace.</p>
         </div>
 
-        <div class="grid-3">
-          <div class="card">
+        <div class="course-grid">
+          <div class="course-card">
             <div>
+              <div class="course-icon-wrap"><i class="fa-solid fa-book-open"></i></div>
               <h3>Noorani Qaida for Beginners</h3>
-              <p>Learn Arabic letters, proper mouth shapes (Makharij), joint letters, and basic vowels from scratch.</p>
+              <p>Master letter recognition, vowel signs (Harakat), and mouth articulation points (Makharij) with patient step-by-step guidance.</p>
             </div>
-            <a href="#trial" class="card-link">Start Learning Qaida →</a>
+            <a href="#trial" class="course-card-link">Start Learning Qaida →</a>
           </div>
 
-          <div class="card">
+          <div class="course-card">
             <div>
+              <div class="course-icon-wrap"><i class="fa-solid fa-gem"></i></div>
               <h3>Tajweed & Quran Recitation</h3>
-              <p>Master the rules of Ghunnah, Ikhfa, Idgham, and Qalqalah to recite the Holy Quran with correct fluency.</p>
+              <p>Learn Ghunnah, Ikhfa, Idgham, and Qalqalah rules to recite the Holy Quran fluently and melodiously.</p>
             </div>
-            <a href="#trial" class="card-link">Learn Tajweed →</a>
+            <a href="#trial" class="course-card-link">Improve Recitation →</a>
           </div>
 
-          <div class="card">
+          <div class="course-card">
             <div>
-              <h3>Online Quran Hifz</h3>
-              <p>Systematic memorization program using the traditional Sabaq, Sabqi, and Manzil daily revision system.</p>
+              <div class="course-icon-wrap"><i class="fa-solid fa-brain"></i></div>
+              <h3>Online Quran Hifz Program</h3>
+              <p>Structured memorization utilizing daily lessons (Sabaq), short revision (Sabqi), and long revision (Manzil).</p>
             </div>
-            <a href="#trial" class="card-link">Join Hifz Program →</a>
+            <a href="#trial" class="course-card-link">Explore Hifz Track →</a>
           </div>
 
-          <div class="card">
+          <div class="course-card">
             <div>
+              <div class="course-icon-wrap"><i class="fa-solid fa-child"></i></div>
               <h3>Quran Classes for Kids</h3>
-              <p>Engaging 30-minute sessions focused on building reading habits, basic Duas, and Islamic manners.</p>
+              <p>Engaging 30-minute interactive classes designed to build love and consistency for the Quran without burnout.</p>
             </div>
-            <a href="#trial" class="card-link">Enroll Your Child →</a>
+            <a href="#trial" class="course-card-link">Enroll Your Child →</a>
           </div>
 
-          <div class="card">
+          <div class="course-card">
             <div>
+              <div class="course-icon-wrap"><i class="fa-solid fa-user-graduate"></i></div>
               <h3>Quran Classes for Adults</h3>
-              <p>Flexible one-on-one sessions for busy brothers and sisters wanting to correct their recitation in private.</p>
+              <p>Private, flexible evening and morning slots for working professionals and adult beginners wanting to relearn recitation.</p>
             </div>
-            <a href="#trial" class="card-link">Start as an Adult →</a>
+            <a href="#trial" class="course-card-link">Start as an Adult →</a>
           </div>
 
-          <div class="card">
+          <div class="course-card">
             <div>
-              <h3>Islamic Studies & Duas</h3>
-              <p>Learn daily supplications, the method of Salah, and essential lessons from the Seerah of the Prophet (ﷺ).</p>
+              <div class="course-icon-wrap"><i class="fa-solid fa-mosque"></i></div>
+              <h3>Islamic Studies & Daily Duas</h3>
+              <p>Complementary learning covering authentic daily supplications, the method of Salah, and the Seerah of Prophet Muhammad (ﷺ).</p>
             </div>
-            <a href="#trial" class="card-link">Explore Islamic Studies →</a>
+            <a href="#trial" class="course-card-link">Explore Islamic Studies →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Us -->
-    <section id="why-us" class="section" style="background: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Why Wisdom Institute</h2>
-          <p class="section-sub">We focus on steady progress and quality learning without complicated processes.</p>
-        </div>
+    <!-- Why Us Section -->
+    <section id="why-us" class="section" style="background: var(--bg-soft);">
+      <div class="container why-grid">
+        <div class="why-image-card"></div>
+        <div>
+          <div class="section-tag">Quality & Trust</div>
+          <h2 class="section-title" style="text-align:left;">Why Families Choose Wisdom Institute</h2>
+          <p style="color:var(--text-body); font-size:15px;">We focus on what helps students stay consistent: dedicated personal attention, certified tutors, and progress tracking.</p>
 
-        <div class="grid-4">
-          <div class="feature-card">
-            <h4>1-on-1 Classes</h4>
-            <p>Every minute of the lesson is focused exclusively on the student.</p>
-          </div>
-          <div class="feature-card">
-            <h4>Qualified Tutors</h4>
-            <p>Experienced male and female teachers trained in Quran recitation pedagogy.</p>
-          </div>
-          <div class="feature-card">
-            <h4>Any Time Zone</h4>
-            <p>Schedules that fit school hours, work shifts, and weekends seamlessly.</p>
-          </div>
-          <div class="feature-card">
-            <h4>Progress Tracking</h4>
-            <p>Regular parent updates and milestones to keep learning consistent.</p>
+          <div class="perk-items">
+            <div class="perk-item">
+              <h4>1-on-1 Dedicated Time</h4>
+              <p>Every minute of your class is focused solely on your learning.</p>
+            </div>
+            <div class="perk-item">
+              <h4>Qualified Educators</h4>
+              <p>Experienced tutors trained in teaching kids and adult beginners.</p>
+            </div>
+            <div class="perk-item">
+              <h4>Flexible Global Timings</h4>
+              <p>Schedule classes around school, university, or work 24/7.</p>
+            </div>
+            <div class="perk-item">
+              <h4>Transparent Progress</h4>
+              <p>Regular milestone tracking and constructive feedback after each unit.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trial Registration Form -->
+    <!-- Trial Registration Section -->
     <section id="trial" class="section">
       <div class="container">
-        <div class="trial-box">
-          <div class="trial-info">
-            <h3>Start Your Free Trial</h3>
-            <p>Fill out the form to schedule an evaluation session with a suitable teacher.</p>
-            <ul>
-              <li>Live 1-on-1 lesson</li>
-              <li>Teacher matched to your level</li>
-              <li>Zero payment or commitment required</li>
+        <div class="trial-wrapper">
+          <div class="trial-side">
+            <div style="font-size:11px; font-weight:800; letter-spacing:1.5px; color:#5eead4; margin-bottom:8px;">ZERO RISK</div>
+            <h3>Book Your Free Assessment Class</h3>
+            <p>Experience a live 1-on-1 lesson and receive an evaluation of your current reading level.</p>
+            <ul class="trial-points">
+              <li><i class="fa-solid fa-circle-check"></i> 100% Free live evaluation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Diagnostic level assessment</li>
+              <li><i class="fa-solid fa-circle-check"></i> Male and female tutor preferences</li>
+              <li><i class="fa-solid fa-circle-check"></i> No credit card or advance payment</li>
             </ul>
           </div>
 
-          <div class="trial-form">
-            <form id="freeTrialForm" onsubmit="handleFormSubmit(event)">
+          <div class="trial-form-wrap">
+            <form id="trialForm" onsubmit="handleTrialSubmit(event)">
               <div class="form-group">
-                <label for="learnerName">Student Name *</label>
-                <input type="text" id="learnerName" class="form-control" placeholder="Full name" required>
+                <label for="learnerName">Student / Parent Full Name *</label>
+                <input type="text" id="learnerName" class="form-control" placeholder="e.g. Tariq Mansoor" required>
               </div>
 
               <div class="form-group">
                 <label for="courseChoice">Desired Course *</label>
                 <select id="courseChoice" class="form-control" required>
-                  <option value="Noorani Qaida">Noorani Qaida (Beginner)</option>
+                  <option value="Noorani Qaida">Noorani Qaida (Beginners)</option>
                   <option value="Quran Tajweed">Quran Recitation with Tajweed</option>
-                  <option value="Quran Hifz">Hifz (Memorization)</option>
-                  <option value="Islamic Studies">Islamic Studies for Kids</option>
+                  <option value="Quran Hifz">Online Hifz Track</option>
+                  <option value="Kids Quran">Kids Quran & Islamic Basics</option>
+                  <option value="Adult Quran">Adult Quran Classes</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="whatsappNumber">WhatsApp Number *</label>
-                <input type="tel" id="whatsappNumber" class="form-control" placeholder="+92 300 1234567" required>
+                <label for="whatsappNum">WhatsApp Number (with Country Code) *</label>
+                <input type="tel" id="whatsappNum" class="form-control" placeholder="+92 300 0000000" required>
               </div>
 
               <div class="form-group">
-                <label for="country">Country *</label>
-                <input type="text" id="country" class="form-control" placeholder="e.g. Pakistan, UK, USA" required>
+                <label for="country">Country of Residence *</label>
+                <input type="text" id="country" class="form-control" placeholder="e.g. Pakistan, United States, UK" required>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Book Free Trial</button>
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Reserve My Free Trial →</button>
             </form>
-            <div id="formSuccess" style="display:none; text-align:center; padding: 20px 0; color: var(--primary);">
-              <strong>JazakAllah! Your request has been received.</strong>
-              <p style="font-size:13px; color: var(--text-muted); margin-top: 4px;">Our coordinator will message you on WhatsApp to confirm your class timing.</p>
+
+            <div id="trialSuccess" style="display:none; text-align:center; padding: 25px 0;">
+              <i class="fa-solid fa-circle-check" style="font-size:45px; color:var(--primary); margin-bottom:12px;"></i>
+              <h4 style="font-size:20px; color:var(--text-dark); margin-bottom:6px;">JazakAllah Khair!</h4>
+              <p style="font-size:13.5px; color:var(--text-body);">Your request has been received. Our coordinator will contact you on WhatsApp shortly to confirm your preferred timing.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="section" style="background: var(--bg-light); border-top: 1px solid var(--border);">
+    <!-- FAQ Accordion -->
+    <section id="faq" class="section" style="background: var(--bg-soft);">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-sub">Clear answers to common questions about our classes.</p>
+          <div class="section-tag">Frequently Asked Questions</div>
+          <h2 class="section-title">Common Questions Answered</h2>
+          <p class="section-desc">Clear answers to help you get started with online Quran learning.</p>
         </div>
 
-        <div class="faq-wrapper">
-          <div class="faq-row">
-            <div class="faq-q">How are the classes conducted?</div>
-            <div class="faq-a">Classes take place 1-on-1 via Zoom or Google Meet with real-time digital Quran screen sharing and teacher feedback.</div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>How are the live 1-on-1 classes conducted?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Classes take place live via interactive software such as Zoom or Google Meet. The teacher and student view digital Quranic material simultaneously on screen with real-time feedback.
+            </div>
           </div>
 
-          <div class="faq-row">
-            <div class="faq-q">Can absolute beginners join?</div>
-            <div class="faq-a">Yes. We start complete beginners and young children with the Noorani Qaida syllabus, focusing on letter recognition and phonetics.</div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Can young children and absolute beginners join?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Yes. Children as young as 4 to 5 years old start with our Noorani Qaida curriculum, learning letter recognition and phonetics in 30-minute sessions.
+            </div>
           </div>
 
-          <div class="faq-row">
-            <div class="faq-q">Are female teachers available?</div>
-            <div class="faq-a">Yes. Qualified female teachers are available for female students and young children.</div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Do you provide female Quran teachers?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              Yes, qualified female Quran teachers are available for sisters and children upon request during registration.
+            </div>
           </div>
 
-          <div class="faq-row">
-            <div class="faq-q">What is the duration of each class?</div>
-            <div class="faq-a">Standard classes are 30 to 45 minutes long, scheduled 2, 3, or 5 days a week based on your preference.</div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>What if I miss a scheduled class?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              With advance notice (at least 4 to 6 hours prior), we arrange a makeup session according to tutor availability.
+            </div>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="container footer-grid">
       <div class="footer-col">
-        <h4>Wisdom Institute</h4>
-        <p style="color: var(--text-muted); line-height: 1.6;">Dedicated to providing accessible, structured, and personalized Quran education worldwide.</p>
+        <div class="logo" style="margin-bottom: 14px;">
+          <div class="logo-badge">و</div>
+          <span>Wisdom Institute</span>
+        </div>
+        <p style="color:var(--text-body); line-height: 1.6;">Dedicated to providing accessible, structured, and personalized Quran education worldwide.</p>
       </div>
 
       <div class="footer-col">
-        <h4>Courses</h4>
+        <h4>Academic Programs</h4>
         <ul>
           <li><a href="#courses">Noorani Qaida</a></li>
           <li><a href="#courses">Tajweed & Recitation</a></li>
-          <li><a href="#courses">Hifz Program</a></li>
-          <li><a href="#courses">Kids Quran Classes</a></li>
+          <li><a href="#courses">Online Hifz Track</a></li>
+          <li><a href="#courses">Quran for Kids</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Links</h4>
+        <h4>Academy Links</h4>
         <ul>
           <li><a href="#why-us">Why Us</a></li>
           <li><a href="#faq">FAQs</a></li>
-          <li><a href="#trial">Free Trial</a></li>
+          <li><a href="#trial">Book Free Assessment</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Contact & Inquiries</h4>
         <ul>
-          <li><a href="https://wa.me/923000000000">WhatsApp: +92 300 0000000</a></li>
-          <li><a href="mailto:info@wisdominstitute.com">info@wisdominstitute.com</a></li>
+          <li><a href="https://wa.me/923000000000"><i class="fa-brands fa-whatsapp"></i> WhatsApp Support</a></li>
+          <li><a href="mailto:info@wisdominstitute.com"><i class="fa-solid fa-envelope"></i> info@wisdominstitute.com</a></li>
         </ul>
       </div>
     </div>
 
     <div class="container footer-bottom">
       <span>&copy; 2026 Wisdom Institute. All rights reserved.</span>
-      <span>Simple, Clean Quran Learning.</span>
+      <span>Authentic Quranic Learning.</span>
     </div>
   </footer>
 
   <script>
-    function handleFormSubmit(e) {
+    function handleTrialSubmit(e) {
       e.preventDefault();
-      document.getElementById('freeTrialForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+      document.getElementById('trialForm').style.display = 'none';
+      document.getElementById('trialSuccess').style.display = 'block';
+    }
+
+    function toggleFaq(btn) {
+      const parent = btn.parentElement;
+      const isOpen = parent.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+      if (!isOpen) parent.classList.add('open');
     }
   </script>
 </body>
