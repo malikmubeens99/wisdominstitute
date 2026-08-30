@@ -10,60 +10,682 @@
   <meta name="keywords" content="learn Quran online, online Quran classes, 1-on-1 Quran classes, Quran classes for kids, Quran classes for adults, Tajweed classes online, online Hifz classes">
   <link rel="canonical" href="https://wisdominstitute.org/">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wisdominstitute.org/">
-  <meta property="og:title" content="Wisdom Institute | Live 1-on-1 Online Quran Classes">
-  <meta property="og:description" content="Private 1-on-1 live Quran classes on Zoom. Tajweed-certified Pakistan-based teachers. Start with 3 free trial classes.">
-
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://wisdominstitute.org/">
-  <meta property="twitter:title" content="Wisdom Institute | Live 1-on-1 Online Quran Classes">
-  <meta property="twitter:description" content="Private 1-on-1 live Quran classes on Zoom. Tajweed-certified Pakistan-based teachers. Start with 3 free trial classes.">
-
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "EducationalOrganization",
-        "@id": "https://wisdominstitute.org/#organization",
-        "name": "Wisdom Institute",
-        "url": "https://wisdominstitute.org",
-        "description": "Wisdom Institute is an online Quran learning institute offering live 1-on-1 Quran classes for children and adults worldwide.",
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Wisdom Hope Foundation"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+923004516944",
-          "contactType": "admissions",
-          "availableLanguage": ["English", "Urdu", "Arabic"]
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://wisdominstitute.org/#website",
-        "url": "https://wisdominstitute.org",
-        "name": "Wisdom Institute",
-        "publisher": {
-          "@id": "https://wisdominstitute.org/#organization"
-        }
+  <style>
+    :root {
+      --color-primary: #111827;
+      --color-primary-light: #1f2937;
+      --color-accent: #0f766e;
+      --color-accent-hover: #115e59;
+      --color-accent-subtle: #f0fdfa;
+      --color-sand: #d97706;
+      --color-sand-light: #fef3c7;
+      --color-bg: #fafaf9;
+      --color-surface: #ffffff;
+      --color-surface-alt: #f5f5f4;
+      --color-text-main: #1c1917;
+      --color-text-muted: #57534e;
+      --color-border: #e7e5e4;
+      --color-border-light: #f5f5f4;
+      --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      --container-max: 1200px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      font-family: var(--font-family);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--color-primary);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: clamp(2.25rem, 4vw + 1rem, 3.75rem); }
+    h2 { font-size: clamp(1.85rem, 2.5vw + 1rem, 2.5rem); }
+    h3 { font-size: 1.35rem; }
+    p { color: var(--color-text-muted); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--color-accent);
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background-color: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-surface);
+      color: var(--color-primary);
+      border-color: var(--color-border);
+    }
+    .btn-secondary:hover {
+      background-color: var(--color-surface-alt);
+      border-color: var(--color-text-muted);
+    }
+
+    .btn-block {
+      width: 100%;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(250, 250, 249, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-logo svg {
+      color: var(--color-accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      color: var(--color-primary);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4.5rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background-color: var(--color-accent-subtle);
+      color: var(--color-accent);
+      border-radius: var(--radius-full);
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(15, 118, 110, 0.15);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-visual {
+      background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      color: #ffffff;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .visual-quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: #f3f4f6;
+      line-height: 1.4;
+    }
+
+    .visual-tagline {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 2rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .visual-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .visual-pill-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: #e5e7eb;
+    }
+
+    .visual-pill-item svg {
+      color: var(--color-sand);
+      flex-shrink: 0;
+    }
+
+    /* Stats */
+    .stats-band {
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 2.25rem 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .stat-item .stat-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1.1;
+    }
+
+    .stat-item .stat-label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Sections */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-header h2 {
+      margin-bottom: 1rem;
+    }
+
+    /* Programs */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .program-card {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(15, 118, 110, 0.3);
+    }
+
+    .program-audience {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .program-card h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .program-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .program-features {
+      margin-bottom: 1.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border-light);
+    }
+
+    .program-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .program-features li svg {
+      color: var(--color-accent);
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .step-card {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+    }
+
+    .step-num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      opacity: 0.3;
+      margin-bottom: 1rem;
+    }
+
+    .step-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+    }
+
+    /* Pricing */
+    .pricing-banner {
+      background: var(--color-accent-subtle);
+      border: 1px solid rgba(15, 118, 110, 0.2);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      color: var(--color-accent-hover);
+      font-weight: 600;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .pricing-card {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      background-color: #ffffff;
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-accent);
+      color: #ffffff;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+    }
+
+    .pricing-frequency {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+
+    .pricing-term {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: 0.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-inclusions {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .inclusion-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+
+    .inclusion-item svg {
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    /* FAQs */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      background-color: var(--color-surface);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 1.25rem 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-question svg {
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-question[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+
+    /* WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #25d366;
+      color: #ffffff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-xl);
+      z-index: 99;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--color-primary);
+      color: #e7e5e4;
+      padding: 4.5rem 0 2rem;
+      margin-top: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.25fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-brand p {
+      color: #a8a29e;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      color: #a8a29e;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #a8a29e;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-actions .btn { display: none; }
+      .mobile-toggle { display: block; }
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        right: 0;
+        background-color: var(--color-surface);
+        border-bottom: 1px solid var(--color-border);
+        padding: 1.5rem;
+        gap: 1rem;
+        box-shadow: var(--shadow-lg);
       }
-    ]
-  }
-  </script>
+      .steps-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .whatsapp-float { bottom: 1.25rem; right: 1.25rem; width: 52px; height: 52px; }
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="Wisdom Institute Home">
+      <a href="index.html" class="brand-logo">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
         <span>Wisdom Institute</span>
       </a>
@@ -73,13 +695,13 @@
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="#programs" class="nav-link">Programs</a></li>
           <li><a href="#why-us" class="nav-link">Why Us</a></li>
-          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#faqs" class="nav-link">FAQs</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <a href="free-trial.html" class="btn btn-primary">Book 3 Free Trial Classes</a>
+        <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book 3 Free Trial Classes</a>
         <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
         </button>
@@ -95,7 +717,7 @@
           <h1>Learn the Quran. Build a lifelong connection.</h1>
           <p>Personalized 1-on-1 Quran learning for children and adults, taught live through Zoom by qualified, Tajweed-certified teachers from anywhere in the world.</p>
           <div class="hero-ctas">
-            <a href="free-trial.html" class="btn btn-primary">Book 3 Free Trial Classes</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book 3 Free Trial Classes</a>
             <a href="#programs" class="btn btn-secondary">Explore Programs</a>
           </div>
         </div>
@@ -121,7 +743,7 @@
       </div>
     </section>
 
-    <section class="stats-band" aria-label="Institutional Stats">
+    <section class="stats-band">
       <div class="container stats-grid">
         <div class="stat-item">
           <div class="stat-number">100+</div>
@@ -159,7 +781,7 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Regular parent progress updates</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Child-friendly teaching pace</li>
             </ul>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Enroll in Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20Kids%20Quran%20Classes." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Enroll in Trial</a>
           </article>
 
           <article class="program-card">
@@ -171,7 +793,7 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Flexible scheduling across timezones</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Male and female teachers available</li>
             </ul>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Enroll in Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20Adult%20Quran%20Classes." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Enroll in Trial</a>
           </article>
 
           <article class="program-card">
@@ -183,7 +805,7 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Guided verse-by-verse correction</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Taught by Tajweed-certified faculty</li>
             </ul>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Enroll in Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20Tajweed%20Course." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Enroll in Trial</a>
           </article>
 
           <article class="program-card">
@@ -195,7 +817,7 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Recent and past revision structures</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-on-1 pacing to prevent burnout</li>
             </ul>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Enroll in Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20Hifz%20Program." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Enroll in Trial</a>
           </article>
 
           <article class="program-card">
@@ -207,7 +829,7 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic sentence comprehension</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Level assessment during trial</li>
             </ul>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Enroll in Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20Arabic%20Language." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Enroll in Trial</a>
           </article>
 
           <article class="program-card">
@@ -219,7 +841,7 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Seerah and Islamic values</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Integrable with Quran classes</li>
             </ul>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Enroll in Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20Islamic%20Studies." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Enroll in Trial</a>
           </article>
         </div>
       </div>
@@ -257,7 +879,7 @@
       </div>
     </section>
 
-    <section class="section" id="pricing-summary">
+    <section class="section" id="pricing">
       <div class="container">
         <div class="section-header">
           <h2>Transparent Monthly Plans</h2>
@@ -273,14 +895,14 @@
             <div class="pricing-frequency">1 Day / Week</div>
             <div class="pricing-amount">$29</div>
             <div class="pricing-term">USD / month</div>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20the%201%20Day/Week%20plan." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
           </div>
 
           <div class="pricing-card">
             <div class="pricing-frequency">2 Days / Week</div>
             <div class="pricing-amount">$39</div>
             <div class="pricing-term">USD / month</div>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20the%202%20Days/Week%20plan." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
           </div>
 
           <div class="pricing-card featured">
@@ -288,21 +910,21 @@
             <div class="pricing-frequency">3 Days / Week</div>
             <div class="pricing-amount">$49</div>
             <div class="pricing-term">USD / month</div>
-            <a href="free-trial.html" class="btn btn-primary btn-block">Start Free Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20the%203%20Days/Week%20plan." class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
           </div>
 
           <div class="pricing-card">
             <div class="pricing-frequency">4 Days / Week</div>
             <div class="pricing-amount">$59</div>
             <div class="pricing-term">USD / month</div>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20the%204%20Days/Week%20plan." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
           </div>
 
           <div class="pricing-card">
             <div class="pricing-frequency">5 Days / Week</div>
             <div class="pricing-amount">$69</div>
             <div class="pricing-term">USD / month</div>
-            <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20the%205%20Days/Week%20plan." class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
           </div>
         </div>
 
@@ -397,7 +1019,7 @@
           <h2 style="color: #ffffff; margin-bottom: 1rem;">Three classes. One simple first step.</h2>
           <p style="color: #d1d5db; max-width: 600px; margin: 0 auto 2rem;">Experience private Quran learning before you commit. Meet your dedicated teacher, understand your level, and see if Wisdom Institute is the right fit for your family.</p>
           <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="free-trial.html" class="btn btn-primary">Book 3 Free Trial Classes</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book 3 Free Trial Classes</a>
             <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20know%20more%20about%20your%20Quran%20classes." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
           </div>
         </div>
@@ -405,7 +1027,7 @@
     </section>
   </main>
 
-  <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Admissions on WhatsApp">
+  <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   </a>
 
@@ -417,28 +1039,26 @@
           <span>Wisdom Institute</span>
         </div>
         <p>A global online Quran learning institute offering live 1-on-1 classes for children and adults worldwide. An initiative of the Wisdom Hope Foundation.</p>
-        <p style="font-size: 0.85rem; color: #78716c;">Mission: A world where no one is unable to read the Quran.</p>
       </div>
 
       <div class="footer-col">
         <h4>Programs</h4>
         <ul>
-          <li><a href="index.html#programs">Kids Quran Classes</a></li>
-          <li><a href="index.html#programs">Adult Quran Classes</a></li>
-          <li><a href="index.html#programs">Tajweed Course</a></li>
-          <li><a href="index.html#programs">Hifz Program</a></li>
-          <li><a href="index.html#programs">Arabic Language</a></li>
-          <li><a href="index.html#programs">Islamic Studies</a></li>
+          <li><a href="#programs">Kids Quran Classes</a></li>
+          <li><a href="#programs">Adult Quran Classes</a></li>
+          <li><a href="#programs">Tajweed Course</a></li>
+          <li><a href="#programs">Hifz Program</a></li>
+          <li><a href="#programs">Arabic Language</a></li>
+          <li><a href="#programs">Islamic Studies</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="pricing.html">Pricing Plans</a></li>
-          <li><a href="free-trial.html">Book Free Trial</a></li>
-          <li><a href="index.html#why-us">Why Us</a></li>
-          <li><a href="index.html#faqs">FAQs</a></li>
+          <li><a href="#pricing">Pricing Plans</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#faqs">FAQs</a></li>
         </ul>
       </div>
 
@@ -457,6 +1077,34 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Nav Toggle
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+
+      // FAQ Accordion
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          const answer = btn.nextElementSibling;
+          faqQuestions.forEach(otherBtn => {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            if (otherBtn.nextElementSibling) otherBtn.nextElementSibling.classList.remove('show');
+          });
+          if (!isExpanded) {
+            btn.setAttribute('aria-expanded', 'true');
+            answer.classList.add('show');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
