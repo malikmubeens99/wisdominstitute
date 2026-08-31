@@ -2,55 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing Plans & Sibling Discounts | Wisdom Institute</title>
   <meta name="description" content="Transparent monthly plans starting from $29/month. Includes 3 free trial classes and 15% sibling discount.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container section">
-    <div class="section-header">
-      <div class="badge">Simple & Clear</div>
-      <h1>Monthly Tuition Plans</h1>
-      <p>All plans include 30-minute private 1-on-1 sessions on Zoom and 3 free trial classes.</p>
-    </div>
 
-    <div class="pricing-banner">
-      Every plan includes 3 complete Free Trial Classes &bull; 15% Sibling Discount available
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+        <span>Wisdom Institute</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="why-us.html" class="nav-link">Why Us</a></li>
+          <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="free-trial.html" class="btn btn-primary">Book 3 Free Trial Classes</a>
+      </div>
     </div>
+  </header>
 
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-frequency">1 Day / Week</div>
-        <div class="pricing-amount">$29</div>
-        <div class="pricing-term">USD / month</div>
-        <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Simple & Clear</div>
+        <h1>Monthly Tuition Plans</h1>
+        <p>All plans include 30-minute private 1-on-1 sessions on Zoom and 3 free trial classes.</p>
       </div>
-      <div class="pricing-card">
-        <div class="pricing-frequency">2 Days / Week</div>
-        <div class="pricing-amount">$39</div>
-        <div class="pricing-term">USD / month</div>
-        <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+
+      <div class="pricing-banner">
+        Every plan includes 3 complete Free Trial Classes &bull; 15% Sibling Discount available
       </div>
-      <div class="pricing-card featured">
-        <div class="featured-tag">Most Popular</div>
-        <div class="pricing-frequency">3 Days / Week</div>
-        <div class="pricing-amount">$49</div>
-        <div class="pricing-term">USD / month</div>
-        <a href="free-trial.html" class="btn btn-primary btn-block">Start Free Trial</a>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-frequency">1 Day / Week</div>
+          <div class="pricing-amount">$29</div>
+          <div class="pricing-term">USD / month</div>
+          <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-frequency">2 Days / Week</div>
+          <div class="pricing-amount">$39</div>
+          <div class="pricing-term">USD / month</div>
+          <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="featured-tag">Most Popular</div>
+          <div class="pricing-frequency">3 Days / Week</div>
+          <div class="pricing-amount">$49</div>
+          <div class="pricing-term">USD / month</div>
+          <a href="free-trial.html" class="btn btn-primary btn-block">Start Free Trial</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-frequency">4 Days / Week</div>
+          <div class="pricing-amount">$59</div>
+          <div class="pricing-term">USD / month</div>
+          <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-frequency">5 Days / Week</div>
+          <div class="pricing-amount">$69</div>
+          <div class="pricing-term">USD / month</div>
+          <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+        </div>
       </div>
-      <div class="pricing-card">
-        <div class="pricing-frequency">4 Days / Week</div>
-        <div class="pricing-amount">$59</div>
-        <div class="pricing-term">USD / month</div>
-        <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-frequency">5 Days / Week</div>
-        <div class="pricing-amount">$69</div>
-        <div class="pricing-term">USD / month</div>
-        <a href="free-trial.html" class="btn btn-secondary btn-block">Start Free Trial</a>
+
+      <div class="pricing-inclusions">
+        <h3>What Every Plan Includes</h3>
+        <div class="inclusions-grid">
+          <div class="inclusion-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Dedicated Private Teacher</span>
+          </div>
+          <div class="inclusion-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Live 1-to-1 Zoom Sessions</span>
+          </div>
+          <div class="inclusion-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>30-Minute Class Duration</span>
+          </div>
+          <div class="inclusion-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Structured Curriculum</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Wisdom Institute. All rights reserved.</div>
+      <div>Parent Organization: Wisdom Hope Foundation</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
