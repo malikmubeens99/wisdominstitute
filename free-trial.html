@@ -4,323 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book 3 Free Trial Classes | Wisdom Institute</title>
-  <meta name="description" content="Start with 3 free private 1-on-1 trial Quran classes on Zoom. No credit card required.">
+  <meta name="description" content="Start with 3 free trial Quran classes on Zoom. No credit card required. Experience 1-on-1 personalized lessons.">
   <link rel="canonical" href="https://wisdominstitute.org/free-trial.html">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --color-primary: #111827;
-      --color-accent: #0f766e;
-      --color-accent-hover: #115e59;
-      --color-accent-subtle: #f0fdfa;
-      --color-bg: #fafaf9;
-      --color-surface: #ffffff;
-      --color-surface-alt: #f5f5f4;
-      --color-text-main: #1c1917;
-      --color-text-muted: #57534e;
-      --color-border: #e7e5e4;
-      --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --radius-full: 9999px;
-      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background-color: var(--color-bg);
-      color: var(--color-text-main);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 820px;
-      margin-inline: auto;
-      padding-inline: 1.5rem;
-    }
-
-    /* Header */
-    .site-header {
-      background-color: var(--color-surface);
-      border-bottom: 1px solid var(--color-border);
-      padding: 1rem 0;
-    }
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-weight: 800;
-      font-size: 1.25rem;
-      color: var(--color-primary);
-      text-decoration: none;
-    }
-    .brand-logo svg { color: var(--color-accent); }
-
-    /* Hero Headline */
-    .booking-intro {
-      text-align: center;
-      padding: 3.5rem 0 2rem;
-    }
-    .sub-badge {
-      color: var(--color-accent);
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-    }
-    .booking-intro h1 {
-      font-size: clamp(2rem, 3.5vw + 1rem, 2.75rem);
-      font-weight: 800;
-      color: var(--color-primary);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.75rem;
-    }
-    .booking-intro p {
-      color: var(--color-text-muted);
-      font-size: 1.1rem;
-      max-width: 580px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: 800;
-      margin-top: 1rem;
-      margin-bottom: 0.25rem;
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--color-text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Multi-step Card */
-    .booking-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-lg);
-      margin-bottom: 4rem;
-    }
-
-    /* Progress Header */
-    .step-progress {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--color-border);
-    }
-    .progress-labels {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--color-primary);
-      margin-bottom: 0.75rem;
-    }
-    .progress-secure {
-      color: var(--color-text-muted);
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-    .progress-bar-track {
-      display: flex;
-      gap: 0.5rem;
-      height: 6px;
-    }
-    .progress-bar-segment {
-      flex: 1;
-      background-color: var(--color-surface-alt);
-      border-radius: var(--radius-full);
-      transition: background-color 0.3s ease;
-    }
-    .progress-bar-segment.active {
-      background-color: var(--color-accent);
-    }
-
-    /* Form Styles */
-    .form-step {
-      display: none;
-    }
-    .form-step.active {
-      display: block;
-      animation: fadeIn 0.3s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .step-heading {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--color-primary);
-      margin-bottom: 0.35rem;
-    }
-    .step-desc {
-      color: var(--color-text-muted);
-      font-size: 0.925rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    .form-label {
-      display: block;
-      font-size: 0.925rem;
-      font-weight: 600;
-      color: var(--color-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    /* Radio Tile Boxes */
-    .radio-tiles {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .radio-tile {
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      cursor: pointer;
-      transition: var(--transition);
-      user-select: none;
-    }
-    .radio-tile:hover {
-      border-color: var(--color-accent);
-      background-color: var(--color-accent-subtle);
-    }
-    .radio-tile input[type="radio"] {
-      accent-color: var(--color-accent);
-      width: 18px;
-      height: 18px;
-    }
-    .radio-tile span {
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--color-primary);
-    }
-
-    /* Input Controls */
-    .form-control {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-sm);
-      font-size: 0.95rem;
-      font-family: inherit;
-      background-color: var(--color-surface);
-      transition: var(--transition);
-    }
-    .form-control:focus {
-      outline: none;
-      border-color: var(--color-accent);
-      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    /* Action Buttons */
-    .step-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--color-border);
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border-radius: var(--radius-full);
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    .btn-primary {
-      background-color: var(--color-accent);
-      color: #ffffff;
-      margin-left: auto;
-    }
-    .btn-primary:hover {
-      background-color: var(--color-accent-hover);
-    }
-    .btn-outline {
-      background: transparent;
-      border-color: var(--color-border);
-      color: var(--color-text-muted);
-    }
-    .btn-outline:hover {
-      background: var(--color-surface-alt);
-      color: var(--color-primary);
-    }
-
-    /* Success Message Screen */
-    .success-screen {
-      display: none;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .success-screen svg {
-      color: var(--color-accent);
-      margin: 0 auto 1.5rem;
-    }
-    .success-screen h2 {
-      font-size: 1.75rem;
-      margin-bottom: 0.75rem;
-    }
-
-    @media (max-width: 640px) {
-      .booking-card { padding: 1.5rem; }
-      .radio-tiles, .form-row { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
   <header class="site-header">
-    <div class="nav-container">
+    <div class="container nav-container">
       <a href="index.html" class="brand-logo">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
         <span>Wisdom Institute</span>
@@ -329,216 +23,144 @@
     </div>
   </header>
 
-  <main class="container">
-    <div class="booking-intro">
-      <div class="sub-badge">Live, Private Quran Learning</div>
-      <h1>Start with 3 free trial classes.</h1>
-      <p>Meet your dedicated teacher, experience real 1-on-1 lessons, and receive a clear level evaluation before deciding to enroll.</p>
-    </div>
-
-    <div class="section-title">Book 3 Free Trial Classes</div>
-    <div class="section-sub">Complete the three short steps below.</div>
-
-    <div class="booking-card">
-      <div class="step-progress">
-        <div class="progress-labels">
-          <span id="step-indicator-text">Step 1 of 3 — Learner details</span>
-          <span class="progress-secure">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            No payment information
-          </span>
-        </div>
-        <div class="progress-bar-track">
-          <div class="progress-bar-segment active" id="bar-1"></div>
-          <div class="progress-bar-segment" id="bar-2"></div>
-          <div class="progress-bar-segment" id="bar-3"></div>
-        </div>
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Live, Private Quran Learning</div>
+        <h1>Start with 3 free trial classes.</h1>
+        <p>Meet your teacher, experience real lessons, and receive a clear recommendation before deciding to enroll.</p>
       </div>
 
-      <form id="multi-step-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-        <input type="hidden" name="subject" value="New 3-Day Free Trial Booking - Wisdom Institute">
-        <input type="hidden" name="from_name" value="Wisdom Institute Portal">
+      <div class="booking-card">
+        <div class="step-progress">
+          <div class="progress-labels">
+            <span id="step-indicator-text">Step 1 of 3 — Learner details</span>
+            <span class="progress-secure">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              No payment information
+            </span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-segment active" id="bar-1"></div>
+            <div class="progress-bar-segment" id="bar-2"></div>
+            <div class="progress-bar-segment" id="bar-3"></div>
+          </div>
+        </div>
 
-        <div class="form-step active" id="step-1">
-          <h2 class="step-heading">About the learner</h2>
-          <p class="step-desc">Help us understand the right starting point.</p>
+        <form id="multi-step-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" value="New 3-Day Free Trial Booking - Wisdom Institute">
 
-          <div class="form-group">
-            <label class="form-label">Who is learning? *</label>
-            <div class="radio-tiles">
-              <label class="radio-tile">
-                <input type="radio" name="who_is_learning" value="My child / another learner" checked>
-                <span>My child / another learner</span>
-              </label>
-              <label class="radio-tile">
-                <input type="radio" name="who_is_learning" value="Myself">
-                <span>Myself</span>
-              </label>
+          <div class="form-step active" id="step-1">
+            <h2 class="step-heading">About the learner</h2>
+            <p class="step-desc">Help us understand the right starting point.</p>
+
+            <div class="form-group">
+              <label class="form-label">Who is learning? *</label>
+              <div class="radio-tiles">
+                <label class="radio-tile">
+                  <input type="radio" name="who_is_learning" value="My child / another learner" checked>
+                  <span>My child / another learner</span>
+                </label>
+                <label class="radio-tile">
+                  <input type="radio" name="who_is_learning" value="Myself">
+                  <span>Myself</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="learner_age" class="form-label">Age group / Student age *</label>
+                <input type="text" id="learner_age" name="learner_age" class="form-control" placeholder="e.g. 7 years (or Adult)" required>
+              </div>
+              <div class="form-group">
+                <label for="preferred_teacher" class="form-label">Teacher Preference</label>
+                <select id="preferred_teacher" name="teacher_preference" class="form-control">
+                  <option value="No Preference">No Preference</option>
+                  <option value="Female Teacher">Female Teacher</option>
+                  <option value="Male Teacher">Male Teacher</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="step-actions">
+              <button type="button" class="btn btn-primary" onclick="nextStep(1)">Next Step &rarr;</button>
             </div>
           </div>
 
-          <div class="form-row">
+          <div class="form-step" id="step-2">
+            <h2 class="step-heading">Program & Schedule</h2>
+            <p class="step-desc">Select the learning pathway and suitable timings.</p>
+
             <div class="form-group">
-              <label for="learner_age" class="form-label">Age group / Student age *</label>
-              <input type="text" id="learner_age" name="learner_age" class="form-control" placeholder="e.g. 7 years (or Adult)" required>
-            </div>
-            <div class="form-group">
-              <label for="preferred_teacher_gender" class="form-label">Teacher Preference</label>
-              <select id="preferred_teacher_gender" name="teacher_preference" class="form-control">
-                <option value="No Preference">No Preference</option>
-                <option value="Female Teacher">Female Teacher</option>
-                <option value="Male Teacher">Male Teacher</option>
+              <label for="program" class="form-label">Preferred Program *</label>
+              <select id="program" name="program" class="form-control" required>
+                <option value="Kids Quran Classes">Kids Quran Classes (Ages 4–15)</option>
+                <option value="Adult Quran Classes">Adult Quran Classes</option>
+                <option value="Tajweed Recitation Course">Tajweed Recitation Course</option>
+                <option value="Hifz (Memorization) Program">Hifz Program</option>
+                <option value="Arabic Language">Arabic Language</option>
+                <option value="Islamic Studies">Islamic Studies</option>
               </select>
             </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="country_timezone" class="form-label">Country & Timezone *</label>
+                <input type="text" id="country_timezone" name="country_timezone" class="form-control" placeholder="e.g. UK (GMT), US Eastern, UAE" required>
+              </div>
+              <div class="form-group">
+                <label for="preferred_time" class="form-label">Preferred Class Time</label>
+                <input type="text" id="preferred_time" name="preferred_time" class="form-control" placeholder="e.g. Evenings, Weekends, 5 PM">
+              </div>
+            </div>
+
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline" onclick="prevStep(2)">&larr; Back</button>
+              <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next Step &rarr;</button>
+            </div>
           </div>
 
-          <div class="step-actions">
-            <button type="button" class="btn btn-primary" onclick="nextStep(1)">Next Step &rarr;</button>
+          <div class="form-step" id="step-3">
+            <h2 class="step-heading">Contact Details</h2>
+            <p class="step-desc">Where should we send your Zoom class links and teacher profile?</p>
+
+            <div class="form-group">
+              <label for="contact_name" class="form-label">Your Full Name (Parent / Student) *</label>
+              <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="e.g. Tariq Mahmood" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="whatsapp" class="form-label">WhatsApp Number (with Country Code) *</label>
+                <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="e.g. +44 7911 123456" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="e.g. tariq@gmail.com" required>
+              </div>
+            </div>
+
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline" onclick="prevStep(3)">&larr; Back</button>
+              <button type="submit" id="submit-btn" class="btn btn-primary">Confirm 3 Free Trial Classes</button>
+            </div>
           </div>
+        </form>
+
+        <div class="success-screen" id="success-screen">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+          <h2>Trial Request Received!</h2>
+          <p style="color: var(--color-text-muted); max-width: 500px; margin: 0.5rem auto 1.5rem;">
+            JazakAllah Khair. Our academic coordinator will contact you via WhatsApp shortly with your teacher profile and Zoom link.
+          </p>
+          <a href="index.html" class="btn btn-secondary">Return to Home</a>
         </div>
-
-        <div class="form-step" id="step-2">
-          <h2 class="step-heading">Program & Schedule</h2>
-          <p class="step-desc">Select the learning pathway and suitable timings.</p>
-
-          <div class="form-group">
-            <label for="program" class="form-label">Preferred Program *</label>
-            <select id="program" name="program" class="form-control" required>
-              <option value="Kids Quran Classes">Kids Quran Classes (Ages 4–15)</option>
-              <option value="Adult Quran Classes">Adult Quran Classes</option>
-              <option value="Tajweed Recitation Course">Tajweed Course</option>
-              <option value="Hifz (Memorization) Program">Hifz Program</option>
-              <option value="Arabic Language">Arabic Language</option>
-              <option value="Islamic Studies">Islamic Studies</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="country_timezone" class="form-label">Country & Timezone *</label>
-              <input type="text" id="country_timezone" name="country_timezone" class="form-control" placeholder="e.g. UK (GMT), US Eastern, UAE" required>
-            </div>
-            <div class="form-group">
-              <label for="preferred_time" class="form-label">Preferred Class Time Slots</label>
-              <input type="text" id="preferred_time" name="preferred_time" class="form-control" placeholder="e.g. Evenings, Weekends, 5 PM">
-            </div>
-          </div>
-
-          <div class="step-actions">
-            <button type="button" class="btn btn-outline" onclick="prevStep(2)">&larr; Back</button>
-            <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next Step &rarr;</button>
-          </div>
-        </div>
-
-        <div class="form-step" id="step-3">
-          <h2 class="step-heading">Contact Details</h2>
-          <p class="step-desc">Where should we send your Zoom class links and teacher profile?</p>
-
-          <div class="form-group">
-            <label for="contact_name" class="form-label">Your Full Name (Parent / Student) *</label>
-            <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="e.g. Tariq Mahmood" required>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="whatsapp" class="form-label">WhatsApp Number (with Country Code) *</label>
-              <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="e.g. +44 7911 123456" required>
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email Address *</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="e.g. tariq@gmail.com" required>
-            </div>
-          </div>
-
-          <div class="step-actions">
-            <button type="button" class="btn btn-outline" onclick="prevStep(3)">&larr; Back</button>
-            <button type="submit" id="submit-btn" class="btn btn-primary">Confirm 3 Free Trial Classes</button>
-          </div>
-        </div>
-      </form>
-
-      <div class="success-screen" id="success-screen">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
-        <h2>Trial Request Received!</h2>
-        <p style="color: var(--color-text-muted); max-width: 500px; margin: 0 auto 1.5rem;">
-          JazakAllah Khair. Our academic coordinator is assigning your dedicated teacher. We will reach out to you via WhatsApp shortly with your Zoom class details.
-        </p>
-        <a href="index.html" class="btn btn-primary">Return to Homepage</a>
       </div>
     </div>
   </main>
 
-  <script>
-    function updateProgress(step) {
-      const labels = [
-        "Step 1 of 3 — Learner details",
-        "Step 2 of 3 — Program & Schedule",
-        "Step 3 of 3 — Contact details"
-      ];
-      document.getElementById('step-indicator-text').innerText = labels[step - 1];
-      
-      document.getElementById('bar-1').classList.toggle('active', step >= 1);
-      document.getElementById('bar-2').classList.toggle('active', step >= 2);
-      document.getElementById('bar-3').classList.toggle('active', step >= 3);
-    }
-
-    function nextStep(current) {
-      // Validate Step 1
-      if (current === 1) {
-        const age = document.getElementById('learner_age').value.trim();
-        if (!age) {
-          alert('Please specify the student age or group.');
-          return;
-        }
-      }
-      // Validate Step 2
-      if (current === 2) {
-        const tz = document.getElementById('country_timezone').value.trim();
-        if (!tz) {
-          alert('Please enter your country or timezone.');
-          return;
-        }
-      }
-
-      document.getElementById(`step-${current}`).classList.remove('active');
-      document.getElementById(`step-${current + 1}`).classList.add('active');
-      updateProgress(current + 1);
-    }
-
-    function prevStep(current) {
-      document.getElementById(`step-${current}`).classList.remove('active');
-      document.getElementById(`step-${current - 1}`).classList.add('active');
-      updateProgress(current - 1);
-    }
-
-    // Handle Direct Submission to Email
-    const form = document.getElementById('multi-step-form');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const submitBtn = document.getElementById('submit-btn');
-      submitBtn.disabled = true;
-      submitBtn.innerText = 'Submitting Booking...';
-
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        form.style.display = 'none';
-        document.querySelector('.step-progress').style.display = 'none';
-        document.getElementById('success-screen').style.display = 'block';
-      })
-      .catch(error => {
-        alert('Booking submitted. Our team will contact you shortly.');
-        form.style.display = 'none';
-        document.querySelector('.step-progress').style.display = 'none';
-        document.getElementById('success-screen').style.display = 'block';
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
