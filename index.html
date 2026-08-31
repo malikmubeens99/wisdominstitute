@@ -6,81 +6,553 @@
   
   <title>Wisdom Institute | Live 1-on-1 Online Quran Classes Worldwide</title>
   <meta name="title" content="Wisdom Institute | Live 1-on-1 Online Quran Classes Worldwide">
-  <meta name="description" content="Wisdom Institute offers private 1-on-1 online Quran classes on Zoom for children and adults worldwide. Tajweed-certified Pakistan-based teachers with 3-7 years experience. Start with 3 free trial classes.">
-  <meta name="keywords" content="learn Quran online, online Quran classes, 1-on-1 Quran classes, Quran classes for kids, Quran classes for adults, Tajweed classes online, online Hifz classes, private Quran teacher, online Islamic studies">
+  <meta name="description" content="Wisdom Institute offers private 1-on-1 online Quran classes on Zoom for kids and adults. Pakistan-based Tajweed-certified teachers. Start with 3 free trial classes.">
   <link rel="canonical" href="https://wisdominstitute.org/">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wisdominstitute.org/">
-  <meta property="og:title" content="Wisdom Institute | Live 1-on-1 Online Quran Classes">
-  <meta property="og:description" content="Private 1-on-1 live Quran classes on Zoom for kids and adults. Tajweed-certified teachers. Start with 3 free trial classes.">
-
-  <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "EducationalOrganization",
-        "@id": "https://wisdominstitute.org/#organization",
-        "name": "Wisdom Institute",
-        "url": "https://wisdominstitute.org",
-        "description": "Wisdom Institute is an online Quran learning institute offering live 1-on-1 Quran classes for children and adults worldwide.",
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Wisdom Hope Foundation"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+923004516944",
-          "contactType": "admissions",
-          "availableLanguage": ["English", "Urdu", "Arabic"]
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://wisdominstitute.org/#website",
-        "url": "https://wisdominstitute.org",
-        "name": "Wisdom Institute",
-        "publisher": {
-          "@id": "https://wisdominstitute.org/#organization"
-        }
-      }
-    ]
-  }
-  </script>
+  <style>
+    :root {
+      --color-primary: #0f172a;
+      --color-primary-light: #1e293b;
+      --color-accent: #0f766e;
+      --color-accent-hover: #115e59;
+      --color-accent-subtle: #f0fdfa;
+      --color-accent-glow: rgba(15, 118, 110, 0.35);
+      --color-gold: #d97706;
+      --color-gold-glow: rgba(217, 119, 6, 0.3);
+      --color-bg: #fafaf9;
+      --color-surface: #ffffff;
+      --color-surface-alt: #f8fafc;
+      --color-text-main: #0f172a;
+      --color-text-muted: #64748b;
+      --color-border: #e2e8f0;
+      
+      --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --container-max: 1180px;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      font-family: var(--font-family);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4 {
+      color: var(--color-primary);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    h1 { font-size: clamp(2.4rem, 4.5vw + 1rem, 3.8rem); }
+    h2 { font-size: clamp(1.85rem, 3vw + 1rem, 2.6rem); }
+    p { color: var(--color-text-muted); }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.85rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background-color: var(--color-accent);
+      color: #ffffff;
+      box-shadow: 0 4px 14px var(--color-accent-glow);
+    }
+    .btn-primary:hover {
+      background-color: var(--color-accent-hover);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(15, 118, 110, 0.4);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-surface);
+      color: var(--color-primary);
+      border-color: var(--color-border);
+    }
+    .btn-secondary:hover {
+      background-color: var(--color-surface-alt);
+      border-color: var(--color-text-muted);
+      transform: translateY(-2px);
+    }
+
+    .btn-block { width: 100%; }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(250, 250, 249, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    .brand-logo svg { color: var(--color-accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .nav-link:hover { color: var(--color-accent); }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background-color: var(--color-accent-subtle);
+      color: var(--color-accent);
+      border-radius: var(--radius-full);
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(15, 118, 110, 0.15);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      margin: 1.5rem 0 2.2rem;
+      max-width: 580px;
+    }
+
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* 3D VISUAL ART COMPOSITION */
+    .hero-3d-wrapper {
+      position: relative;
+      perspective: 1200px;
+    }
+
+    .hero-3d-card {
+      background: radial-gradient(circle at 80% 20%, #1e293b 0%, #0f172a 100%);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.25rem;
+      color: #ffffff;
+      box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      transform-style: preserve-3d;
+      transition: var(--transition);
+      overflow: hidden;
+    }
+
+    .hero-3d-card:hover {
+      transform: translateY(-8px) rotateX(4deg) rotateY(-4deg);
+      box-shadow: 0 35px 70px -10px var(--color-accent-glow), 0 0 0 1px rgba(15, 118, 110, 0.4);
+    }
+
+    .art-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(15, 118, 110, 0.3);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(15, 118, 110, 0.5);
+      color: #5eead4;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .art-icon-container {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.4) 0%, rgba(217, 119, 6, 0.3) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.5);
+      animation: floatArt 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatArt {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-8px) rotate(3deg); }
+    }
+
+    .hero-3d-card h3 {
+      color: #ffffff;
+      font-size: 1.55rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.3;
+    }
+
+    .hero-3d-card p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .pill-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    
+    .pill-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .pill-item svg { color: var(--color-gold); flex-shrink: 0; }
+
+    /* STATS BAND */
+    .stats-band {
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 2.25rem 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .stat-number { font-size: 2.4rem; font-weight: 800; color: var(--color-accent); line-height: 1.1; }
+    .stat-label { font-size: 0.875rem; font-weight: 600; color: var(--color-text-muted); margin-top: 0.25rem; }
+
+    /* ==========================================================================
+       REDESIGNED STRUCTURED QURANIC LEARNING PATHWAYS (CARDS)
+       ========================================================================== */
+    .section { padding: 5.5rem 0; }
+    
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+    }
+    .section-header h2 { margin-bottom: 0.75rem; }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .program-card {
+      background: #ffffff;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--color-accent);
+      box-shadow: 0 20px 40px -15px rgba(15, 118, 110, 0.22);
+    }
+
+    .program-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .program-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--color-accent-subtle);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(15, 118, 110, 0.15);
+      transition: var(--transition);
+    }
+
+    .program-card:hover .program-icon-box {
+      background-color: var(--color-accent);
+      color: #ffffff;
+      transform: rotate(-6deg) scale(1.08);
+    }
+
+    .program-tag {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+    }
+
+    .program-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.65rem;
+      color: var(--color-primary);
+    }
+
+    .program-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+      flex-grow: 1;
+    }
+
+    .program-features {
+      margin-bottom: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px dashed var(--color-border);
+      list-style: none;
+    }
+
+    .program-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #334155;
+      margin-bottom: 0.6rem;
+    }
+
+    .program-features li svg {
+      color: var(--color-accent);
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    /* MULTI-STEP BOOKING CARD */
+    .booking-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2.75rem;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+    }
+    .step-progress { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); }
+    .progress-labels { display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.85rem; }
+    .progress-secure { color: var(--color-text-muted); display: flex; align-items: center; gap: 0.4rem; font-weight: 500; }
+    .progress-bar-track { display: flex; gap: 0.6rem; height: 7px; }
+    .progress-bar-segment { flex: 1; background: var(--color-surface-alt); border-radius: var(--radius-full); transition: 0.3s; }
+    .progress-bar-segment.active { background: var(--color-accent); }
+
+    .form-step { display: none; }
+    .form-step.active { display: block; animation: slideIn 0.3s ease; }
+    @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .step-heading { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.3rem; }
+    .step-desc { color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.75rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-label { display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+    .radio-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .radio-tile {
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .radio-tile:hover, .radio-tile.selected { border-color: var(--color-accent); background: var(--color-accent-subtle); }
+    .radio-tile input { accent-color: var(--color-accent); width: 18px; height: 18px; }
+    .radio-tile span { font-weight: 700; font-size: 0.95rem; }
+
+    .form-control {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      background: var(--color-surface);
+      transition: var(--transition);
+    }
+    .form-control:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 4px var(--color-accent-glow); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .step-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
+    .success-screen { display: none; text-align: center; padding: 2.5rem 1rem; }
+
+    /* WHY US & PRICING */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .why-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 2.25rem; transition: var(--transition); }
+    .why-card:hover { transform: translateY(-5px); border-color: var(--color-accent); box-shadow: 0 15px 30px -10px rgba(0,0,0,0.06); }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+    .pricing-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 2.25rem 1.5rem; text-align: center; transition: var(--transition); }
+    .pricing-card.featured { border-color: var(--color-accent); box-shadow: 0 20px 35px -10px rgba(15, 118, 110, 0.2); position: relative; }
+    .featured-tag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--color-accent); color: #fff; padding: 0.3rem 0.85rem; font-size: 0.75rem; font-weight: 800; border-radius: var(--radius-full); text-transform: uppercase; }
+    .pricing-amount { font-size: 2.75rem; font-weight: 800; color: var(--color-primary); line-height: 1; margin: 0.5rem 0; }
+
+    /* FAQ */
+    .faq-container { max-width: 820px; margin: 0 auto; }
+    .faq-item { border: 1px solid var(--color-border); border-radius: var(--radius-md); margin-bottom: 0.9rem; background: var(--color-surface); overflow: hidden; }
+    .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 1.35rem 1.6rem; font-size: 1.05rem; font-weight: 700; color: var(--color-primary); display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+    .faq-answer { display: none; padding: 0 1.6rem 1.35rem; font-size: 0.95rem; line-height: 1.65; }
+    .faq-answer.show { display: block; }
+
+    /* WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #25d366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      z-index: 99;
+      transition: var(--transition);
+    }
+    .whatsapp-float:hover { transform: scale(1.12); }
+
+    /* FOOTER */
+    .site-footer { background: var(--color-primary); color: #e2e8f0; padding: 5rem 0 2.5rem; margin-top: auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.25fr; gap: 3rem; margin-bottom: 3.5rem; }
+    .footer-brand p { color: #94a3b8; margin: 1rem 0; font-size: 0.95rem; }
+    .footer-col h4 { color: #fff; margin-bottom: 1.25rem; font-size: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul li a { color: #94a3b8; text-decoration: none; font-size: 0.925rem; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.875rem; color: #94a3b8; }
+
+    @media (max-width: 992px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .stats-grid, .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .programs-grid, .radio-tiles, .form-row, .stats-grid, .footer-grid { grid-template-columns: 1fr; }
+      .booking-card { padding: 1.75rem 1.25rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="Wisdom Institute Home">
+      <a href="index.html" class="brand-logo">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
         <span>Wisdom Institute</span>
       </a>
 
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="#booking" class="nav-link">Book Free Trial</a></li>
           <li><a href="#programs" class="nav-link">Programs</a></li>
           <li><a href="#why-us" class="nav-link">Why Us</a></li>
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#faqs" class="nav-link">FAQs</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="nav-actions">
-        <a href="#booking" class="btn btn-primary">Book 3 Free Trial Classes</a>
-        <button class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-        </button>
-      </div>
+      <a href="#booking" class="btn btn-primary">Book 3 Free Trial Classes</a>
     </div>
   </header>
 
@@ -95,36 +567,180 @@
             <a href="#booking" class="btn btn-primary">Book 3 Free Trial Classes</a>
             <a href="#programs" class="btn btn-secondary">Explore Programs</a>
           </div>
-          <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
-            ✓ 100+ Students &bull; 15+ Countries &bull; 100% Private 1-on-1 Learning
+          <div style="margin-top: 1.5rem; font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">
+            ✓ 100+ Students &bull; 15+ Countries &bull; 100% Private 1-on-1 Sessions
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="visual-tagline">Our Core Mission</div>
-          <div class="visual-quote">"A world where no one is unable to read the Quran."</div>
-          <div class="visual-pills">
-            <div class="visual-pill-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Live 1-on-1 private Zoom sessions (30 mins)</span>
+        <div class="hero-3d-wrapper">
+          <div class="hero-3d-card">
+            <div class="art-badge">1-on-1 Live</div>
+            <div class="art-icon-container">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
             </div>
-            <div class="visual-pill-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Tajweed-certified male & female teachers</span>
-            </div>
-            <div class="visual-pill-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>3 complete free trial classes before enrollment</span>
+            <h3>Lifelong Quranic Foundation</h3>
+            <p>"A world where no one is unable to read the Quran."</p>
+            <div class="pill-list">
+              <div class="pill-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Live 1-to-1 Zoom Sessions (30 Mins)</span>
+              </div>
+              <div class="pill-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Tajweed-Certified Male & Female Teachers</span>
+              </div>
+              <div class="pill-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>3 Complete Free Trial Classes Included</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="stats-band">
+      <div class="container stats-grid">
+        <div>
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Students Enrolled</div>
+        </div>
+        <div>
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Countries Represented</div>
+        </div>
+        <div>
+          <div class="stat-number">3–7 Yrs</div>
+          <div class="stat-label">Teacher Experience</div>
+        </div>
+        <div>
+          <div class="stat-number">1-on-1</div>
+          <div class="stat-label">Private Teaching Model</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Curriculum Pathways</div>
+          <h2>Structured Quranic Learning Pathways</h2>
+          <p>Every learner starts at their own level. Our teachers guide students step-by-step with patience and structured progress updates.</p>
+        </div>
+
+        <div class="programs-grid">
+          <article class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span class="program-tag">Ages 4–15</span>
+            </div>
+            <h3>Kids Quran Classes</h3>
+            <p>Build confident Quran reading through a patient, age-aware learning pathway focusing on basic pronunciation, foundational Tajweed, and gradual progression.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Foundational Qaida to full Quran</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Regular parent progress updates</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Child-friendly interactive teaching</li>
+            </ul>
+            <a href="kids-quran-classes.html" class="btn btn-secondary btn-block">View Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <span class="program-tag">Adults & Beginners</span>
+            </div>
+            <h3>Adult Quran Classes</h3>
+            <p>Start from the right level and learn at a respectful, private pace. Ideal for beginners, returning learners, or those wishing to correct recitation.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 100% private 1-on-1 environment</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Flexible global schedules</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Male & female teachers available</li>
+            </ul>
+            <a href="adult-quran-classes.html" class="btn btn-secondary btn-block">View Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="program-tag">Teens & Adults</span>
+            </div>
+            <h3>Tajweed Course</h3>
+            <p>Master the exact rules of Quranic recitation, covering Makharij (exit points of letters), Sifaat (characteristics), and guided recitation improvement.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Makharij and articulation points</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Guided verse-by-verse correction</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Certified Tajweed faculty</li>
+            </ul>
+            <a href="tajweed.html" class="btn btn-secondary btn-block">View Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span class="program-tag">Committed Learners</span>
+            </div>
+            <h3>Hifz Program</h3>
+            <p>Build a sustainable Quran memorization routine with dedicated teacher guidance, structured new memorization, and rigorous long-term revision cycles.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily new lesson (Sabaq) tracking</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Recent & past revision structures</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-on-1 pacing to prevent burnout</li>
+            </ul>
+            <a href="hifz.html" class="btn btn-secondary btn-block">View Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="program-tag">Language Pathway</span>
+            </div>
+            <h3>Arabic Language</h3>
+            <p>Foundational Arabic reading, vocabulary building, and basic grammatical comprehension to understand the language of the Quran.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Reading and vocabulary expansion</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic sentence comprehension</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Level assessment during trial</li>
+            </ul>
+            <a href="arabic.html" class="btn btn-secondary btn-block">View Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+              </div>
+              <span class="program-tag">Supplemental Pathway</span>
+            </div>
+            <h3>Islamic Studies</h3>
+            <p>Complementary Islamic education covering daily Duas, basic Fiqh essentials, Seerah, and Islamic manners for young learners and beginners.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily Duas and prayer essentials</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Seerah and Islamic values</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Integrable with Quran classes</li>
+            </ul>
+            <a href="islamic-studies.html" class="btn btn-secondary btn-block">View Program Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="booking-section" id="booking">
       <div class="container">
-        <div class="section-title" style="text-align: center; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.25rem;">Book 3 Free Trial Classes</div>
-        <div class="section-sub" style="text-align: center; color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Complete the three short steps below.</div>
+        <div class="section-header">
+          <div class="badge">Zero Risk &bull; No Payment Info</div>
+          <h2>Start with 3 free trial classes.</h2>
+          <p>Meet your teacher, experience real lessons, and receive a clear level evaluation before deciding to enroll.</p>
+        </div>
 
         <div class="booking-card">
           <div class="step-progress">
@@ -148,17 +764,17 @@
             <input type="hidden" name="from_name" value="Wisdom Institute Admissions">
 
             <div class="form-step active" id="step-1">
-              <h2 class="step-heading">About the learner</h2>
+              <h3 class="step-heading">About the learner</h3>
               <p class="step-desc">Help us understand the right starting point.</p>
 
               <div class="form-group">
                 <label class="form-label">Who is learning? *</label>
                 <div class="radio-tiles">
-                  <label class="radio-tile">
+                  <label class="radio-tile selected" onclick="selectRadioTile(this)">
                     <input type="radio" name="who_is_learning" value="My child / another learner" checked>
                     <span>My child / another learner</span>
                   </label>
-                  <label class="radio-tile">
+                  <label class="radio-tile" onclick="selectRadioTile(this)">
                     <input type="radio" name="who_is_learning" value="Myself">
                     <span>Myself</span>
                   </label>
@@ -167,7 +783,7 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="learner_age" class="form-label">Age group / Student age *</label>
+                  <label for="learner_age" class="form-label">Student Age *</label>
                   <input type="text" id="learner_age" name="learner_age" class="form-control" placeholder="e.g. 8 years (or Adult)" required>
                 </div>
                 <div class="form-group">
@@ -186,7 +802,7 @@
             </div>
 
             <div class="form-step" id="step-2">
-              <h2 class="step-heading">Program & Schedule</h2>
+              <h3 class="step-heading">Program & Schedule</h3>
               <p class="step-desc">Select the learning pathway and suitable timings.</p>
 
               <div class="form-group">
@@ -208,18 +824,18 @@
                 </div>
                 <div class="form-group">
                   <label for="preferred_time" class="form-label">Preferred Class Time</label>
-                  <input type="text" id="preferred_time" name="preferred_time" class="form-control" placeholder="e.g. Evenings, Weekends, 5 PM">
+                  <input type="text" id="preferred_time" name="preferred_time" class="form-control" placeholder="e.g. Evenings, 5 PM">
                 </div>
               </div>
 
               <div class="step-actions">
-                <button type="button" class="btn btn-outline" onclick="prevStep(2)">&larr; Back</button>
+                <button type="button" class="btn btn-secondary" onclick="prevStep(2)">&larr; Back</button>
                 <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next Step &rarr;</button>
               </div>
             </div>
 
             <div class="form-step" id="step-3">
-              <h2 class="step-heading">Contact Details</h2>
+              <h3 class="step-heading">Contact Details</h3>
               <p class="step-desc">Where should we send your Zoom class links and teacher profile?</p>
 
               <div class="form-group">
@@ -239,125 +855,20 @@
               </div>
 
               <div class="step-actions">
-                <button type="button" class="btn btn-outline" onclick="prevStep(3)">&larr; Back</button>
+                <button type="button" class="btn btn-secondary" onclick="prevStep(3)">&larr; Back</button>
                 <button type="submit" id="submit-btn" class="btn btn-primary">Confirm 3 Free Trial Classes</button>
               </div>
             </div>
           </form>
 
           <div class="success-screen" id="success-screen">
-            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
             <h2>Trial Request Received!</h2>
             <p style="color: var(--color-text-muted); max-width: 500px; margin: 0.5rem auto 1.5rem;">
-              JazakAllah Khair. Our academic coordinator is assigning your dedicated teacher. We will reach out to you via WhatsApp shortly with your Zoom class details.
+              JazakAllah Khair. Our academic coordinator will contact you via WhatsApp shortly with your teacher profile and Zoom link.
             </p>
             <a href="#programs" class="btn btn-secondary">Explore Programs</a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="stats-band" aria-label="Institutional Credibility Stats">
-      <div class="container stats-grid">
-        <div class="stat-item">
-          <div class="stat-number">100+</div>
-          <div class="stat-label">Students Taught</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Countries Represented</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">3–7 Yrs</div>
-          <div class="stat-label">Teacher Experience</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">1-on-1</div>
-          <div class="stat-label">Private Teaching Model</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="programs">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge">Structured Curriculum</div>
-          <h2>Structured Quranic Learning Pathways</h2>
-          <p>Every learner starts at their own level. Our teachers guide students step-by-step with patience and structured progress updates.</p>
-        </div>
-
-        <div class="programs-grid">
-          <article class="program-card">
-            <div class="program-audience">Ages 4–15</div>
-            <h3>Kids Quran Classes</h3>
-            <p>Build confident Quran reading through a patient, age-aware learning pathway focusing on basic pronunciation, foundational Tajweed, and gradual progression.</p>
-            <ul class="program-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Foundational Qaida to full Quran</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Regular parent progress updates</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Child-friendly teaching pace</li>
-            </ul>
-            <a href="kids-quran-classes.html" class="btn btn-secondary btn-block">Program Details</a>
-          </article>
-
-          <article class="program-card">
-            <div class="program-audience">Adults & Beginners</div>
-            <h3>Adult Quran Classes</h3>
-            <p>Start from the right level and learn at a respectful, private pace. Ideal for beginners, returning learners, or those wishing to correct recitation.</p>
-            <ul class="program-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Completely private 1-on-1 environment</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Flexible scheduling across timezones</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Male and female teachers available</li>
-            </ul>
-            <a href="adult-quran-classes.html" class="btn btn-secondary btn-block">Program Details</a>
-          </article>
-
-          <article class="program-card">
-            <div class="program-audience">Teens & Adults</div>
-            <h3>Tajweed Course</h3>
-            <p>Master the exact rules of Quranic recitation, covering Makharij (exit points of letters), Sifaat (characteristics), and guided recitation improvement.</p>
-            <ul class="program-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Makharij and articulation points</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Guided verse-by-verse correction</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Taught by Tajweed-certified faculty</li>
-            </ul>
-            <a href="tajweed.html" class="btn btn-secondary btn-block">Program Details</a>
-          </article>
-
-          <article class="program-card">
-            <div class="program-audience">Committed Learners</div>
-            <h3>Hifz Program</h3>
-            <p>Build a sustainable Quran memorization routine with dedicated teacher guidance, structured new memorization, and rigorous long-term revision cycles.</p>
-            <ul class="program-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily new lesson (Sabaq) tracking</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Recent and past revision structures</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-on-1 pacing to prevent burnout</li>
-            </ul>
-            <a href="hifz.html" class="btn btn-secondary btn-block">Program Details</a>
-          </article>
-
-          <article class="program-card">
-            <div class="program-audience">Additional Pathway</div>
-            <h3>Arabic Language</h3>
-            <p>Foundational Arabic reading, vocabulary building, and basic grammatical comprehension to understand the language of the Quran.</p>
-            <ul class="program-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Reading and vocabulary expansion</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic sentence comprehension</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Level assessment during trial</li>
-            </ul>
-            <a href="arabic.html" class="btn btn-secondary btn-block">Program Details</a>
-          </article>
-
-          <article class="program-card">
-            <div class="program-audience">Supplemental Pathway</div>
-            <h3>Islamic Studies</h3>
-            <p>Complementary Islamic education covering daily Duas, basic Fiqh essentials, Seerah, and Islamic manners for young learners and beginners.</p>
-            <ul class="program-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily Duas and prayer essentials</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Seerah and Islamic values</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Integrable with Quran classes</li>
-            </ul>
-            <a href="islamic-studies.html" class="btn btn-secondary btn-block">Program Details</a>
-          </article>
         </div>
       </div>
     </section>
@@ -399,40 +910,7 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge">Simple Pathway</div>
-          <h2>How It Works</h2>
-          <p>A simple, transparent 4-step pathway from your first lesson to steady learning.</p>
-        </div>
-
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-num">01</div>
-            <h3>Book Your Free Trial</h3>
-            <p>Choose a convenient time. No credit card or upfront billing information required.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num">02</div>
-            <h3>Meet Your Teacher</h3>
-            <p>Connect 1-on-1 via Zoom with your dedicated Pakistan-based Tajweed-certified teacher.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num">03</div>
-            <h3>Find Your Level</h3>
-            <p>Complete 3 free trial sessions to evaluate teaching fit, pacing, and curriculum baseline.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num">04</div>
-            <h3>Continue Learning</h3>
-            <p>Choose your weekly schedule and receive official payment guidance via admissions WhatsApp.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="background-color: var(--color-surface-alt);" id="pricing">
+    <section class="section" id="pricing">
       <div class="container">
         <div class="section-header">
           <div class="badge">Clear Tuition</div>
@@ -440,173 +918,86 @@
           <p>Simple pricing with no hidden charges. All plans include 30-minute private 1-on-1 sessions on Zoom.</p>
         </div>
 
-        <div class="pricing-banner">
+        <div style="background: var(--color-accent-subtle); border: 1px solid rgba(15, 118, 110, 0.2); border-radius: var(--radius-md); padding: 1.25rem; text-align: center; margin-bottom: 3rem; font-size: 0.95rem; color: var(--color-accent-hover); font-weight: 700;">
           Every plan includes 3 complete Free Trial Classes &bull; 15% Sibling Discount available on all subscriptions
         </div>
 
         <div class="pricing-grid">
           <div class="pricing-card">
-            <div class="pricing-frequency">1 Day / Week</div>
+            <h4>1 Day / Week</h4>
             <div class="pricing-amount">$29</div>
-            <div class="pricing-term">USD / month</div>
-            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
+            <p>USD / month</p>
+            <a href="#booking" class="btn btn-secondary btn-block" style="margin-top: 1rem;">Start Free Trial</a>
           </div>
-
           <div class="pricing-card">
-            <div class="pricing-frequency">2 Days / Week</div>
+            <h4>2 Days / Week</h4>
             <div class="pricing-amount">$39</div>
-            <div class="pricing-term">USD / month</div>
-            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
+            <p>USD / month</p>
+            <a href="#booking" class="btn btn-secondary btn-block" style="margin-top: 1rem;">Start Free Trial</a>
           </div>
-
           <div class="pricing-card featured">
             <div class="featured-tag">Most Popular</div>
-            <div class="pricing-frequency">3 Days / Week</div>
+            <h4>3 Days / Week</h4>
             <div class="pricing-amount">$49</div>
-            <div class="pricing-term">USD / month</div>
-            <a href="#booking" class="btn btn-primary btn-block">Start Free Trial</a>
+            <p>USD / month</p>
+            <a href="#booking" class="btn btn-primary btn-block" style="margin-top: 1rem;">Start Free Trial</a>
           </div>
-
           <div class="pricing-card">
-            <div class="pricing-frequency">4 Days / Week</div>
+            <h4>4 Days / Week</h4>
             <div class="pricing-amount">$59</div>
-            <div class="pricing-term">USD / month</div>
-            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
+            <p>USD / month</p>
+            <a href="#booking" class="btn btn-secondary btn-block" style="margin-top: 1rem;">Start Free Trial</a>
           </div>
-
           <div class="pricing-card">
-            <div class="pricing-frequency">5 Days / Week</div>
+            <h4>5 Days / Week</h4>
             <div class="pricing-amount">$69</div>
-            <div class="pricing-term">USD / month</div>
-            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
-          </div>
-        </div>
-
-        <div class="pricing-inclusions">
-          <h3>What Every Plan Includes</h3>
-          <div class="inclusions-grid">
-            <div class="inclusion-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Dedicated Private Teacher</span>
-            </div>
-            <div class="inclusion-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Live 1-to-1 Zoom Sessions</span>
-            </div>
-            <div class="inclusion-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>30-Minute Class Duration</span>
-            </div>
-            <div class="inclusion-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Structured Curriculum</span>
-            </div>
+            <p>USD / month</p>
+            <a href="#booking" class="btn btn-secondary btn-block" style="margin-top: 1rem;">Start Free Trial</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="faqs">
+    <section class="section" style="background-color: var(--color-surface-alt);" id="faqs">
       <div class="container faq-container">
         <div class="section-header">
-          <div class="badge">Help & Guidance</div>
+          <div class="badge">Help Center</div>
           <h2>Frequently Asked Questions</h2>
-          <p>Everything you need to know about our 1-on-1 online classes, scheduling, and trial process.</p>
+          <p>Everything you need to know about our 1-on-1 online classes and enrollment process.</p>
         </div>
 
         <div class="faq-list">
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>How do the 3 free trial classes work?</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>You register online without providing any credit card. We coordinate convenient times via WhatsApp, assign a dedicated teacher, and conduct 3 full 30-minute private 1-on-1 sessions on Zoom. After the 3rd class, you decide whether to enroll.</p>
-            </div>
+            <button class="faq-question"><span>How do the 3 free trial classes work?</span> <span>&darr;</span></button>
+            <div class="faq-answer">You register online without providing any credit card. We coordinate convenient times via WhatsApp, assign a dedicated teacher, and conduct 3 full 30-minute private 1-on-1 sessions on Zoom.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Are the classes really 1-on-1?</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. All classes are strictly 1-to-1 private live sessions on Zoom. The teacher focuses entirely on one student throughout the session.</p>
-            </div>
+            <button class="faq-question"><span>Are the classes really 1-on-1?</span> <span>&darr;</span></button>
+            <div class="faq-answer">Yes. All classes are strictly 1-to-1 private live sessions on Zoom. The teacher focuses entirely on one student throughout the session.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Where are the teachers based and what are their qualifications?</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Our teachers are Pakistan-based educators holding formal Tajweed certifications with approximately 3 to 7 years of teaching experience. We provide both male and female teachers.</p>
-            </div>
+            <button class="faq-question"><span>Where are the teachers based and what are their qualifications?</span> <span>&darr;</span></button>
+            <div class="faq-answer">Our teachers are Pakistan-based educators holding formal Tajweed certifications with approximately 3 to 7 years of teaching experience. We provide both male and female teachers.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Can students from the USA, UK, Canada, and Australia join?</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, Wisdom Institute currently teaches students across 15+ countries worldwide. We offer flexible schedules accommodating Eastern, Central, Pacific, GMT, and Australian timezones.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>How do payments work after the trial?</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>We do not collect credit cards on this website. Following your 3 trial classes, our admissions team will share official remittance instructions (such as Remitly, TapTap Send, or direct bank transfer) via our official WhatsApp desk (+92 300 4516944).</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Can beginners or adults returning after a break join?</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, we have specialized learning pathways for beginners starting from the Arabic alphabet as well as adults looking to refine their recitation in a private and respectful environment.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div style="background: linear-gradient(135deg, #111827 0%, #1f2937 100%); border-radius: var(--radius-lg); padding: 3.5rem 2rem; text-align: center; color: #ffffff; box-shadow: var(--shadow-xl); max-width: 860px; margin: 0 auto;">
-          <h2 style="color: #ffffff; margin-bottom: 1rem;">Three classes. One simple first step.</h2>
-          <p style="color: #d1d5db; max-width: 600px; margin: 0 auto 2rem;">Experience private Quran learning before you commit. Meet your dedicated teacher, understand your level, and see whether Wisdom Institute is the right fit for your family.</p>
-          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="#booking" class="btn btn-primary">Book 3 Free Trial Classes</a>
-            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20know%20more%20about%20your%20Quran%20classes." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+            <button class="faq-question"><span>How do payments work after the trial?</span> <span>&darr;</span></button>
+            <div class="faq-answer">We do not collect credit cards on this website. Following your 3 trial classes, our admissions team will share official remittance instructions (such as Remitly, TapTap Send, or direct bank transfer) via our official WhatsApp desk (+92 300 4516944).</div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Admissions on WhatsApp">
+  <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   </a>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="brand-logo" style="color: #ffffff;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-          <span>Wisdom Institute</span>
-        </div>
+        <h3>Wisdom Institute</h3>
         <p>A global online Quran learning institute offering live 1-on-1 classes for children and adults worldwide. An initiative of the Wisdom Hope Foundation.</p>
-        <p style="font-size: 0.85rem; color: #78716c;">Mission: A world where no one is unable to read the Quran.</p>
       </div>
-
       <div class="footer-col">
         <h4>Programs</h4>
         <ul>
@@ -618,34 +1009,103 @@
           <li><a href="islamic-studies.html">Islamic Studies</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#booking">Book Free Trial</a></li>
-          <li><a href="#programs">Our Programs</a></li>
-          <li><a href="#why-us">Why Us</a></li>
           <li><a href="#pricing">Pricing Plans</a></li>
-          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#why-us">Why Us</a></li>
           <li><a href="about.html">About Us</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Admissions Contact</h4>
+        <h4>Direct Contact</h4>
         <ul>
-          <li><a href="https://wa.me/923004516944" target="_blank" rel="noopener noreferrer">WhatsApp: +92 300 4516944</a></li>
-          <li><span style="font-size: 0.9rem; color: #a8a29e;">Hours: Flexible Global Schedules</span></li>
+          <li><a href="https://wa.me/923004516944" target="_blank">WhatsApp: +92 300 4516944</a></li>
         </ul>
       </div>
     </div>
-
     <div class="container footer-bottom">
       <div>&copy; 2026 Wisdom Institute. All rights reserved.</div>
       <div>Parent Organization: Wisdom Hope Foundation</div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    function selectRadioTile(selectedElement) {
+      document.querySelectorAll('.radio-tile').forEach(tile => tile.classList.remove('selected'));
+      selectedElement.classList.add('selected');
+    }
+
+    function updateProgress(step) {
+      const labels = [
+        "Step 1 of 3 — Learner details",
+        "Step 2 of 3 — Program & Schedule",
+        "Step 3 of 3 — Contact details"
+      ];
+      document.getElementById('step-indicator-text').innerText = labels[step - 1];
+      document.getElementById('bar-1').classList.toggle('active', step >= 1);
+      document.getElementById('bar-2').classList.toggle('active', step >= 2);
+      document.getElementById('bar-3').classList.toggle('active', step >= 3);
+    }
+
+    function nextStep(current) {
+      if (current === 1) {
+        const age = document.getElementById('learner_age').value.trim();
+        if (!age) {
+          alert('Please enter student age.');
+          return;
+        }
+      }
+      if (current === 2) {
+        const tz = document.getElementById('country_timezone').value.trim();
+        if (!tz) {
+          alert('Please enter your country and timezone.');
+          return;
+        }
+      }
+
+      document.getElementById(`step-${current}`).classList.remove('active');
+      document.getElementById(`step-${current + 1}`).classList.add('active');
+      updateProgress(current + 1);
+    }
+
+    function prevStep(current) {
+      document.getElementById(`step-${current}`).classList.remove('active');
+      document.getElementById(`step-${current - 1}`).classList.add('active');
+      updateProgress(current - 1);
+    }
+
+    const form = document.getElementById('multi-step-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Submitting...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(() => {
+        form.style.display = 'none';
+        document.querySelector('.step-progress').style.display = 'none';
+        document.getElementById('success-screen').style.display = 'block';
+      })
+      .catch(() => {
+        form.style.display = 'none';
+        document.querySelector('.step-progress').style.display = 'none';
+        document.getElementById('success-screen').style.display = 'block';
+      });
+    });
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const ans = btn.nextElementSibling;
+        ans.classList.toggle('show');
+      });
+    });
+  </script>
 </body>
 </html>
