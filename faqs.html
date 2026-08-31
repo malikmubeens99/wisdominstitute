@@ -2,27 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frequently Asked Questions | Wisdom Institute</title>
-  <meta name="description" content="Read answers to common questions regarding classes, pricing, trial lessons, and teachers.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Answers to common questions regarding classes, pricing, trial lessons, and teachers.">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container section">
-    <div class="section-header">
-      <div class="badge">Help Center</div>
-      <h1>Frequently Asked Questions</h1>
-    </div>
-    <div class="faq-container">
-      <div class="faq-item">
-        <button class="faq-question"><span>How do the free trial classes work?</span> <span>&darr;</span></button>
-        <div class="faq-answer">You register online with no credit card required. We arrange 3 full 30-minute private lessons on Zoom.</div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+        <span>Wisdom Institute</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="why-us.html" class="nav-link">Why Us</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="free-trial.html" class="btn btn-primary">Book 3 Free Trial Classes</a>
       </div>
-      <div class="faq-item">
-        <button class="faq-question"><span>Are classes 1-on-1?</span> <span>&darr;</span></button>
-        <div class="faq-answer">Yes, 100% of our sessions are private 1-to-1 meetings on Zoom.</div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container faq-container">
+      <div class="section-header">
+        <div class="badge">Help & Support</div>
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about our classes and enrollment process.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do the 3 free trial classes work?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>You register online without providing any credit card. We coordinate convenient times via WhatsApp, assign a dedicated teacher, and conduct 3 full 30-minute private lessons on Zoom.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Are the classes really 1-on-1?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. All classes are strictly 1-to-1 private live sessions on Zoom. The teacher focuses entirely on one student.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Where are the teachers based and what are their qualifications?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our teachers are Pakistan-based educators who are Tajweed-certified and have approximately 3 to 7 years of teaching experience. We offer both male and female teachers.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How are tuition payments handled?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We do not collect card details on the website. After your 3 trial classes, our admissions team provides payment instructions via official WhatsApp (Remitly, TapTap Send, or direct bank transfer).</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Wisdom Institute. All rights reserved.</div>
+      <div>Parent Organization: Wisdom Hope Foundation</div>
+    </div>
+  </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
