@@ -6,9 +6,14 @@
   
   <title>Wisdom Institute | Live 1-on-1 Online Quran Classes Worldwide</title>
   <meta name="title" content="Wisdom Institute | Live 1-on-1 Online Quran Classes Worldwide">
-  <meta name="description" content="Wisdom Institute offers private 1-on-1 online Quran classes for kids and adults. Pakistan-based Tajweed-certified teachers. Start with 3 free trial classes.">
-  <meta name="keywords" content="learn Quran online, online Quran classes, 1-on-1 Quran classes, Quran classes for kids, Quran classes for adults, Tajweed classes online, online Hifz classes">
+  <meta name="description" content="Wisdom Institute offers private 1-on-1 online Quran classes on Zoom for children and adults worldwide. Tajweed-certified Pakistan-based teachers with 3-7 years experience. Start with 3 free trial classes.">
+  <meta name="keywords" content="learn Quran online, online Quran classes, 1-on-1 Quran classes, Quran classes for kids, Quran classes for adults, Tajweed classes online, online Hifz classes, private Quran teacher, online Islamic studies">
   <link rel="canonical" href="https://wisdominstitute.org/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wisdominstitute.org/">
+  <meta property="og:title" content="Wisdom Institute | Live 1-on-1 Online Quran Classes">
+  <meta property="og:description" content="Private 1-on-1 live Quran classes on Zoom for kids and adults. Tajweed-certified teachers. Start with 3 free trial classes.">
 
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +23,34 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Wisdom Institute",
-    "url": "https://wisdominstitute.org",
-    "description": "Wisdom Institute is an online Quran learning institute offering live 1-on-1 Quran classes for children and adults worldwide.",
-    "parentOrganization": { "@type": "Organization", "name": "Wisdom Hope Foundation" },
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+923004516944", "contactType": "admissions" }
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://wisdominstitute.org/#organization",
+        "name": "Wisdom Institute",
+        "url": "https://wisdominstitute.org",
+        "description": "Wisdom Institute is an online Quran learning institute offering live 1-on-1 Quran classes for children and adults worldwide.",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Wisdom Hope Foundation"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+923004516944",
+          "contactType": "admissions",
+          "availableLanguage": ["English", "Urdu", "Arabic"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://wisdominstitute.org/#website",
+        "url": "https://wisdominstitute.org",
+        "name": "Wisdom Institute",
+        "publisher": {
+          "@id": "https://wisdominstitute.org/#organization"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -31,24 +58,27 @@
 
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+      <a href="index.html" class="brand-logo" aria-label="Wisdom Institute Home">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
         <span>Wisdom Institute</span>
       </a>
-      <nav>
+
+      <nav aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="#booking" class="nav-link">Book Free Trial</a></li>
-          <li><a href="programs.html" class="nav-link">Programs</a></li>
-          <li><a href="why-us.html" class="nav-link">Why Us</a></li>
-          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-          <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#faqs" class="nav-link">FAQs</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
+
       <div class="nav-actions">
         <a href="#booking" class="btn btn-primary">Book 3 Free Trial Classes</a>
-        <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -56,17 +86,45 @@
 
   <main>
     <section class="hero">
-      <div class="container">
-        <div class="badge">Live, Private Quran Learning &bull; Wisdom Hope Foundation</div>
-        <h1>Start with 3 free trial classes.</h1>
-        <p>Meet your teacher, experience real lessons, and receive a clear recommendation before deciding to enroll. Personalized 1-on-1 Quran learning on Zoom for children and adults worldwide.</p>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">A Wisdom Hope Foundation Initiative</div>
+          <h1>Learn the Quran. Build a lifelong connection.</h1>
+          <p>Personalized 1-on-1 Quran learning for children and adults, taught live through Zoom by qualified, Tajweed-certified teachers from anywhere in the world.</p>
+          <div class="hero-ctas">
+            <a href="#booking" class="btn btn-primary">Book 3 Free Trial Classes</a>
+            <a href="#programs" class="btn btn-secondary">Explore Programs</a>
+          </div>
+          <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
+            ✓ 100+ Students &bull; 15+ Countries &bull; 100% Private 1-on-1 Learning
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-tagline">Our Core Mission</div>
+          <div class="visual-quote">"A world where no one is unable to read the Quran."</div>
+          <div class="visual-pills">
+            <div class="visual-pill-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Live 1-on-1 private Zoom sessions (30 mins)</span>
+            </div>
+            <div class="visual-pill-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tajweed-certified male & female teachers</span>
+            </div>
+            <div class="visual-pill-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>3 complete free trial classes before enrollment</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="booking-section" id="booking">
       <div class="container">
-        <div class="section-title" style="text-align:center; font-size:1.6rem; font-weight:800; margin-bottom:0.25rem;">Book 3 Free Trial Classes</div>
-        <div class="section-sub" style="text-align:center; color:var(--color-text-muted); font-size:0.95rem; margin-bottom:2rem;">Complete the three short steps below.</div>
+        <div class="section-title" style="text-align: center; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.25rem;">Book 3 Free Trial Classes</div>
+        <div class="section-sub" style="text-align: center; color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Complete the three short steps below.</div>
 
         <div class="booking-card">
           <div class="step-progress">
@@ -191,15 +249,15 @@
             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
             <h2>Trial Request Received!</h2>
             <p style="color: var(--color-text-muted); max-width: 500px; margin: 0.5rem auto 1.5rem;">
-              JazakAllah Khair. Our academic coordinator will contact you via WhatsApp shortly with your teacher profile and Zoom link.
+              JazakAllah Khair. Our academic coordinator is assigning your dedicated teacher. We will reach out to you via WhatsApp shortly with your Zoom class details.
             </p>
-            <a href="programs.html" class="btn btn-secondary">Explore Programs</a>
+            <a href="#programs" class="btn btn-secondary">Explore Programs</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stats-band">
+    <section class="stats-band" aria-label="Institutional Credibility Stats">
       <div class="container stats-grid">
         <div class="stat-item">
           <div class="stat-number">100+</div>
@@ -215,13 +273,373 @@
         </div>
         <div class="stat-item">
           <div class="stat-number">1-on-1</div>
-          <div class="stat-label">Private Model</div>
+          <div class="stat-label">Private Teaching Model</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Structured Curriculum</div>
+          <h2>Structured Quranic Learning Pathways</h2>
+          <p>Every learner starts at their own level. Our teachers guide students step-by-step with patience and structured progress updates.</p>
+        </div>
+
+        <div class="programs-grid">
+          <article class="program-card">
+            <div class="program-audience">Ages 4–15</div>
+            <h3>Kids Quran Classes</h3>
+            <p>Build confident Quran reading through a patient, age-aware learning pathway focusing on basic pronunciation, foundational Tajweed, and gradual progression.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Foundational Qaida to full Quran</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Regular parent progress updates</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Child-friendly teaching pace</li>
+            </ul>
+            <a href="kids-quran-classes.html" class="btn btn-secondary btn-block">Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-audience">Adults & Beginners</div>
+            <h3>Adult Quran Classes</h3>
+            <p>Start from the right level and learn at a respectful, private pace. Ideal for beginners, returning learners, or those wishing to correct recitation.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Completely private 1-on-1 environment</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Flexible scheduling across timezones</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Male and female teachers available</li>
+            </ul>
+            <a href="adult-quran-classes.html" class="btn btn-secondary btn-block">Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-audience">Teens & Adults</div>
+            <h3>Tajweed Course</h3>
+            <p>Master the exact rules of Quranic recitation, covering Makharij (exit points of letters), Sifaat (characteristics), and guided recitation improvement.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Makharij and articulation points</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Guided verse-by-verse correction</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Taught by Tajweed-certified faculty</li>
+            </ul>
+            <a href="tajweed.html" class="btn btn-secondary btn-block">Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-audience">Committed Learners</div>
+            <h3>Hifz Program</h3>
+            <p>Build a sustainable Quran memorization routine with dedicated teacher guidance, structured new memorization, and rigorous long-term revision cycles.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily new lesson (Sabaq) tracking</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Recent and past revision structures</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-on-1 pacing to prevent burnout</li>
+            </ul>
+            <a href="hifz.html" class="btn btn-secondary btn-block">Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-audience">Additional Pathway</div>
+            <h3>Arabic Language</h3>
+            <p>Foundational Arabic reading, vocabulary building, and basic grammatical comprehension to understand the language of the Quran.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Reading and vocabulary expansion</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic sentence comprehension</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Level assessment during trial</li>
+            </ul>
+            <a href="arabic.html" class="btn btn-secondary btn-block">Program Details</a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-audience">Supplemental Pathway</div>
+            <h3>Islamic Studies</h3>
+            <p>Complementary Islamic education covering daily Duas, basic Fiqh essentials, Seerah, and Islamic manners for young learners and beginners.</p>
+            <ul class="program-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily Duas and prayer essentials</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Seerah and Islamic values</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Integrable with Quran classes</li>
+            </ul>
+            <a href="islamic-studies.html" class="btn btn-secondary btn-block">Program Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-surface-alt);" id="why-us">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Trust & Care</div>
+          <h2>Why Choose Wisdom Institute</h2>
+          <p>Carefully structured, trustworthy Quranic education designed for international Muslim families.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>Personal Dedicated Teacher</h3>
+            <p>One dedicated teacher focused entirely on the learner's individual progress, pace, and development.</p>
+          </div>
+          <div class="why-card">
+            <h3>Live 1-on-1 Learning</h3>
+            <p>Private 30-minute interactive sessions on Zoom instead of crowded group classrooms.</p>
+          </div>
+          <div class="why-card">
+            <h3>Structured Progress</h3>
+            <p>Step-by-step curriculum rather than random, unorganized lessons. Regular progress updates for parents.</p>
+          </div>
+          <div class="why-card">
+            <h3>Flexible Global Schedules</h3>
+            <p>Classes scheduled conveniently for students in the USA, UK, Canada, Australia, UAE, and Europe.</p>
+          </div>
+          <div class="why-card">
+            <h3>Qualified Teachers</h3>
+            <p>Male and female Pakistan-based teachers who are Tajweed-certified with 3–7 years of teaching experience.</p>
+          </div>
+          <div class="why-card">
+            <h3>Global Community</h3>
+            <p>Over 100+ active students learning from more than 15 countries worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Simple Pathway</div>
+          <h2>How It Works</h2>
+          <p>A simple, transparent 4-step pathway from your first lesson to steady learning.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Book Your Free Trial</h3>
+            <p>Choose a convenient time. No credit card or upfront billing information required.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Meet Your Teacher</h3>
+            <p>Connect 1-on-1 via Zoom with your dedicated Pakistan-based Tajweed-certified teacher.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Find Your Level</h3>
+            <p>Complete 3 free trial sessions to evaluate teaching fit, pacing, and curriculum baseline.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>Continue Learning</h3>
+            <p>Choose your weekly schedule and receive official payment guidance via admissions WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-surface-alt);" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Clear Tuition</div>
+          <h2>Transparent Monthly Plans</h2>
+          <p>Simple pricing with no hidden charges. All plans include 30-minute private 1-on-1 sessions on Zoom.</p>
+        </div>
+
+        <div class="pricing-banner">
+          Every plan includes 3 complete Free Trial Classes &bull; 15% Sibling Discount available on all subscriptions
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-frequency">1 Day / Week</div>
+            <div class="pricing-amount">$29</div>
+            <div class="pricing-term">USD / month</div>
+            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-frequency">2 Days / Week</div>
+            <div class="pricing-amount">$39</div>
+            <div class="pricing-term">USD / month</div>
+            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="featured-tag">Most Popular</div>
+            <div class="pricing-frequency">3 Days / Week</div>
+            <div class="pricing-amount">$49</div>
+            <div class="pricing-term">USD / month</div>
+            <a href="#booking" class="btn btn-primary btn-block">Start Free Trial</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-frequency">4 Days / Week</div>
+            <div class="pricing-amount">$59</div>
+            <div class="pricing-term">USD / month</div>
+            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-frequency">5 Days / Week</div>
+            <div class="pricing-amount">$69</div>
+            <div class="pricing-term">USD / month</div>
+            <a href="#booking" class="btn btn-secondary btn-block">Start Free Trial</a>
+          </div>
+        </div>
+
+        <div class="pricing-inclusions">
+          <h3>What Every Plan Includes</h3>
+          <div class="inclusions-grid">
+            <div class="inclusion-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Dedicated Private Teacher</span>
+            </div>
+            <div class="inclusion-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Live 1-to-1 Zoom Sessions</span>
+            </div>
+            <div class="inclusion-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>30-Minute Class Duration</span>
+            </div>
+            <div class="inclusion-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Structured Curriculum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faqs">
+      <div class="container faq-container">
+        <div class="section-header">
+          <div class="badge">Help & Guidance</div>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about our 1-on-1 online classes, scheduling, and trial process.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do the 3 free trial classes work?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>You register online without providing any credit card. We coordinate convenient times via WhatsApp, assign a dedicated teacher, and conduct 3 full 30-minute private 1-on-1 sessions on Zoom. After the 3rd class, you decide whether to enroll.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are the classes really 1-on-1?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. All classes are strictly 1-to-1 private live sessions on Zoom. The teacher focuses entirely on one student throughout the session.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Where are the teachers based and what are their qualifications?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Our teachers are Pakistan-based educators holding formal Tajweed certifications with approximately 3 to 7 years of teaching experience. We provide both male and female teachers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can students from the USA, UK, Canada, and Australia join?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, Wisdom Institute currently teaches students across 15+ countries worldwide. We offer flexible schedules accommodating Eastern, Central, Pacific, GMT, and Australian timezones.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do payments work after the trial?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>We do not collect credit cards on this website. Following your 3 trial classes, our admissions team will share official remittance instructions (such as Remitly, TapTap Send, or direct bank transfer) via our official WhatsApp desk (+92 300 4516944).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can beginners or adults returning after a break join?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we have specialized learning pathways for beginners starting from the Arabic alphabet as well as adults looking to refine their recitation in a private and respectful environment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, #111827 0%, #1f2937 100%); border-radius: var(--radius-lg); padding: 3.5rem 2rem; text-align: center; color: #ffffff; box-shadow: var(--shadow-xl); max-width: 860px; margin: 0 auto;">
+          <h2 style="color: #ffffff; margin-bottom: 1rem;">Three classes. One simple first step.</h2>
+          <p style="color: #d1d5db; max-width: 600px; margin: 0 auto 2rem;">Experience private Quran learning before you commit. Meet your dedicated teacher, understand your level, and see whether Wisdom Institute is the right fit for your family.</p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="#booking" class="btn btn-primary">Book 3 Free Trial Classes</a>
+            <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20know%20more%20about%20your%20Quran%20classes." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <a href="https://wa.me/923004516944?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20book%20the%203%20free%20trial%20Quran%20classes." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Admissions on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
   <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo" style="color: #ffffff;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+          <span>Wisdom Institute</span>
+        </div>
+        <p>A global online Quran learning institute offering live 1-on-1 classes for children and adults worldwide. An initiative of the Wisdom Hope Foundation.</p>
+        <p style="font-size: 0.85rem; color: #78716c;">Mission: A world where no one is unable to read the Quran.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="kids-quran-classes.html">Kids Quran Classes</a></li>
+          <li><a href="adult-quran-classes.html">Adult Quran Classes</a></li>
+          <li><a href="tajweed.html">Tajweed Course</a></li>
+          <li><a href="hifz.html">Hifz Program</a></li>
+          <li><a href="arabic.html">Arabic Language</a></li>
+          <li><a href="islamic-studies.html">Islamic Studies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#booking">Book Free Trial</a></li>
+          <li><a href="#programs">Our Programs</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#pricing">Pricing Plans</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Admissions Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/923004516944" target="_blank" rel="noopener noreferrer">WhatsApp: +92 300 4516944</a></li>
+          <li><span style="font-size: 0.9rem; color: #a8a29e;">Hours: Flexible Global Schedules</span></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="container footer-bottom">
       <div>&copy; 2026 Wisdom Institute. All rights reserved.</div>
       <div>Parent Organization: Wisdom Hope Foundation</div>
