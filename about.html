@@ -2,22 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Wisdom Institute</title>
   <meta name="description" content="Learn about Wisdom Institute, an online Quran initiative by the Wisdom Hope Foundation.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container section">
-    <div class="section-header">
-      <div class="badge">Our Identity</div>
-      <h1>About Wisdom Institute</h1>
-      <p>An online Quran education initiative by the <strong>Wisdom Hope Foundation</strong>.</p>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+        <span>Wisdom Institute</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="why-us.html" class="nav-link">Why Us</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="free-trial.html" class="btn btn-primary">Book 3 Free Trial Classes</a>
+      </div>
     </div>
-    <div class="booking-card">
-      <h3>Our Mission</h3>
-      <p style="margin: 1rem 0;"><em>"A world where no one is unable to read the Quran."</em></p>
-      <p>With 2 years of dedicated educational service, Wisdom Institute connects international Muslim families worldwide with qualified, Tajweed-certified teachers from Pakistan for private 1-on-1 Zoom classes.</p>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Our Identity</div>
+        <h1>About Wisdom Institute</h1>
+        <p>An online Quran education initiative by the <strong>Wisdom Hope Foundation</strong>.</p>
+      </div>
+
+      <div class="booking-card" style="max-width: 800px;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Our Mission</h2>
+        <p style="font-size: 1.15rem; color: var(--color-accent); font-weight: 600; margin-bottom: 1.5rem;">
+          "A world where no one is unable to read the Quran."
+        </p>
+        <p style="margin-bottom: 1.25rem;">
+          With 2 years of dedicated educational service, Wisdom Institute connects international Muslim families worldwide with qualified, Tajweed-certified teachers from Pakistan for private 1-on-1 Zoom classes.
+        </p>
+        <p style="margin-bottom: 2rem;">
+          We currently serve over 100+ students across 15+ countries, including the USA, UK, Canada, Australia, UAE, Saudi Arabia, and Europe.
+        </p>
+        <a href="free-trial.html" class="btn btn-primary">Start Your 3 Free Trial Classes</a>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Wisdom Institute. All rights reserved.</div>
+      <div>Parent Organization: Wisdom Hope Foundation</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
